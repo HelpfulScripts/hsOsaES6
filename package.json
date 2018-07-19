@@ -1,6 +1,6 @@
 {
   "name": "hsosaes6",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",
   "keywords": [
@@ -47,6 +47,6 @@
     "webpack": "^4.14.0"
   },
   "dependencies": {
-      "hsnode":"^2.2.7"
+    "hsnode": "^2.2.7"
   }
 }
