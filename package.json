@@ -47,5 +47,6 @@
     "webpack": "^4.14.0"
   },
   "dependencies": {
+      "hsnode":"^2.2.7"
   }
 }
