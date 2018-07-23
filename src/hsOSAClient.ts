@@ -1,3 +1,16 @@
+// import { Application, Path, delay } from './OSA';
+
+declare function Path(name:string):any;
+declare function delay(ms:number):void;
+
+declare interface ApplicationIF {
+    (name?:string):any;
+    currentApplication: ()=>any;
+  }
+
+declare const Application:ApplicationIF;
+
+
 /**
  * Collection of client-side (OSA-side) OSX scripts to be executed in the context of Apple's
  * Open Scripting Architecture (OSA).
@@ -6,60 +19,20 @@ export const OSXcommands = {
     /**
      * sends a message via thew OSX Messages app
      */
-    osaSendMessage: `function(message, recipients) {
-        function getService(services) {
-            for (let s=0; s<services.length; s++) {
-                if (services[s].serviceType() === "iMessage") {  return services[s];  }
-            }
-            return undefined;
+    osaSendMessage: function(appleIDs:string[], message:string, attachments:string[]) {    
+        const Messages = Application("Messages");
+        Messages.includeStandardAdditions = true;
+        const buddies = appleIDs.map((a:string) => Messages.buddies.whose({ handle: a })[0]);
+
+        Messages.send(message, { to: buddies[0] });
+        if (attachments && attachments.length>0) {
+            attachments.forEach((a:string) => Messages.send(Path(a), { to: buddies[0] }));
         }
-        function getChat(recipients, services) {
-            const service = getService(services);
-            if (!service) { return undefined; }
-            const chats = service.chats;
-            for (let c=0; c<chats.length; c++) {
-                return chats[c]; 
-            }
-            return undefined;
-        }
-        
-        function getBuddy(recipient, services) {
-            for (let s=0; s<services.length; s++) {
-                const service = services[s];
-                if (service.serviceType() === "iMessage") {
-                    const buddies = service.buddies;
-                    for (let b=0; b<buddies.length; b++) {
-                        const buddy = buddies[b];
-                        if (buddy.handle() === recipient) {
-                            return buddy;
-                        }
-                    }
-                }
-            }
-            return undefined;
-        }
-    
-        const iMessage = Application("Messages");
-        iMessage.includeStandardAdditions = true;
-        
-        if (message.indexOf("/")===0) { message = Path(message); }
-        const chat = getChat(recipients, iMessage.services);
-        if (chat) { 
-            iMessage.send(message, {to:chat}); }
-        else {
-            for (let r=0; r<recipients.length; r++) {
-                const buddy = getBuddy(recipients[r], iMessage.services);
-                if (buddy) { 
-                    iMessage.send(message, {to:buddy}); 
-                }
-            }
-        }
-        return "done"; 
-    }`,
+    },
     /**
      * sends an email vis thew OSX Mail app
      */
-    osaSendEmail: `function(subject, address, content, attachments) {
+    osaSendEmail: function(subject:string, address:string, content:string, attachments:string[]) {
         const Mail = Application("Mail");
         Mail.activate();
         Mail.includeStandardAdditions = true;
@@ -78,59 +51,84 @@ export const OSXcommands = {
         //Mail.outgoingMessages.push(message);
         delay(5);
         message.send();        
-    }`,
+    },
+    /**
+     * sends an email vis thew OSX Mail app
+     */
+    osaGetEmail: function(date:string) {
+        const Mail = Application("Mail");
+        Mail.activate();
+        Mail.includeStandardAdditions = true;
+        Mail.checkForNewMail();
+
+        const result:any[] = [];
+        Mail.accounts().forEach((acc:any) => {
+            const inbox = acc.mailboxes().filter((mb:any) => mb.name().toLowerCase()==="inbox")[0];
+            const newMsgs = inbox.messages().filter((m:any) => Date.parse(m.dateReceived()) >= Date.parse(date));
+            result.push({
+                mailboxes:    acc.mailboxes().length,
+                account:      acc.name(),
+                inbox:        inbox.name(),
+                numMsgTotal:  inbox.messages().length,
+                numMsgNew:    newMsgs.length,
+                dateSince:    date,
+                msgSinceDate: newMsgs.map((m:any) => { return {from: m.sender(), subject: m.subject(), received: m.dateReceived(), id: m.id()};})
+            });
+        });
+        return result;
+    },
     /**
      * speaks a text on OSX Speech Services
      */
-    osaSay: `function(text) {
+    osaSay: function(text:string) {
         const app = Application.currentApplication();
         app.includeStandardAdditions = true;
         app.setVolume(3);
         app.say(text, {using:"Allison"});
         app.setVolume(0);
         return true;
-    }`,
+    },
     /**
      * launches an OSX app
      */
-    osaLaunch: `function(name) {  
+    osaLaunch: function(name:string) {  
         const app = Application(name);
         app.includeStandardAdditions = true;
         app.activate();
         return true;
-    }`,
+    },
     /**
      * launches a script on OSX
      */
-    osaLaunchScript: `name => {  
+    osaLaunchScript: (name:string) => {  
         const app = Application(name);
         app.launch();
         app.run();
         return true;
-    }`,
+    },
     /**
      * Quits an OSX app
      */
-    osaQuit: `name => {
+    osaQuit: (name:string) => {
         const app = Application(name);
         app.quit();
         return true;
-    }`,
+    },
     /** 
      * Initiates a Facetime call on OSX
      */
-    osaCallFacetime: `() => {
+    osaCallFacetime: () => {
         const app = Application("System Events");
         const prc = app.applicationProcesses.whose({name:"FaceTime"})[0];
         const win = prc.windows[0];
         const btn = win.buttons.whose({name:"Call"})[0];
         btn.click();
         return true;
-    }`,
+    },
     /**
      * Sets the screen brightness on OSX
      */
-    osaBrightness: `value => {
+    osaBrightness: (value:number) => {
         const Prefs = Application("System Preferences");
         Prefs.includeStandardAdditions = true;
         Prefs.activate();
@@ -148,24 +146,24 @@ export const OSXcommands = {
         delay(1);
         Prefs.quit();
         return true;
-    }`,
+    },
     /**
      * Sets the OSX System Volume
      */
-    osaVolume: `value => {
+    osaVolume: (value:string) => {
         const app = Application.currentApplication();
         app.includeStandardAdditions = true;
         app.setVolume(parseInt(value));
         return true;
-    }`,
+    },
     /**
      * Restarts OSX
      */
-    osaRestart: `() => {
+    osaRestart: () => {
         const app = Application.currentApplication();
         app.includeStandardAdditions = true;
         app.restart();
         return true;
-    }`
+    }
 };
 

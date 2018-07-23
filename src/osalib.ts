@@ -20,14 +20,14 @@ export function extractLogs (stderr:string) {
  * @description returns a promise to execute osaString.
  * @return a promise with resolve(stdout, errors) and reject(error, errorLine)
  */
-export function osaJS (osaFunction:string, ...args: any[]):Promise<any> {
+export function osaJS (osaFunction:any, ...args: any[]):Promise<any> {
     // get an array of arguments, excluding the osaFunction
 //    const args = Array.prototype.slice.call(arguments, 1, arguments.length);
 
     // conver these args to json
     // to do: replace ':' in a
     const jsonArgs = args.map(a => `${JSON.stringify(a)}`).join(',');
-    log.debug(jsonArgs);
+    log.debug(`arguments to call: ${jsonArgs}`);
   
     // augment console.log to encapsulate logs with <node-osa>...</node-osa> tags
     const consoleLogPatch = `
@@ -41,7 +41,7 @@ export function osaJS (osaFunction:string, ...args: any[]):Promise<any> {
 
     // build a string to call osaFunction, pass in args, and evaulate to
     // the JSON representation of the return value, then call it with osascript
-    const functionCallString = consoleLogPatch + 'JSON.stringify((' + osaFunction + ')(' + jsonArgs + '));';
+    const functionCallString = consoleLogPatch + 'JSON.stringify((' + osaFunction.toString() + ')(' + jsonArgs + '));';
     const escapedCall = functionCallString
         .replace(/ +/g, ' ')      // replace multiple whitespaces by single whitespaces
         .replace(/'/g, "'\''")     // replace ' by '\''
@@ -53,15 +53,9 @@ export function osaJS (osaFunction:string, ...args: any[]):Promise<any> {
     log.debug(executeString);
     // execute osascript as promise
     return cp.exec(executeString)
-        .then((result:{out:string, err:string}) => {
-            const logResult = extractLogs(result.err);
-            try {
-                const jp = (result.out === '\n' || result.out === '')? undefined : JSON.parse(result.out);
-                return { jp, logResult };
-            } catch (e) {   // if stdout wasn't JSON), something went wrong
-                let newErr = new Error('Function did not return an object: ' + e.message);
-                throw { newErr, escapedCall};
-            }
+        .then((result:{stdout:string, stderr:string}) => {
+            const logResult = extractLogs(result.stderr);
+            return {stdout:result.stdout, logResult:logResult};
         })
         .catch((err:any) => {
             const match = err.toString().match(/(Error on line (\d+)): ([\s\S]*)/i);

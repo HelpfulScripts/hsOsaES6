@@ -13,10 +13,13 @@ import { osaJS }        from './osalib';
  * standard response handler for `osaJS` calls.
  * @param result 
  */
-const responseHandler = (result:{out:any, err:any}):string => {
-    if (result.err) { log.info('response: '+result.err); }
-    if (result.out) { log.debug('result: ' + result.out); }
-    return result.out;
+const responseHandler = (cmd:string) => {
+    return (result:{stdout:string, logResult:string}):string => {
+        log.debug(`call ${cmd} returned`);
+        if (result.logResult) { log.info(`messages from executing ${cmd}: ${result.logResult}`); }
+        if (result.stdout) { log.debug(`call ${cmd} returned with result ${result.stdout}`); }
+        return result.stdout;
+    };
 };
 
 /**
@@ -44,11 +47,11 @@ export const osa = {
      * @param appleIDs list of recipients in iMessage
      * @return a promise that resolves to the returned result 
      */
-    message: (message:string, appleIDs:string[]):Promise<any> => { 
-        log.info('sending iMessage \'' + message + '\' to ' + appleIDs.join(', '));
-        return osaJS(OSXcommands.osaSendMessage, message, appleIDs)
-            .then(responseHandler)
-            .catch(errorHandler('iMessage ' + message));
+    sendMessage: (appleIDs:string[], message:string, attachments?:string[]):Promise<any> => { 
+        log.info(`sending Message to ${appleIDs.join(', ')}, content '${message}', ${attachments?attachments.length:0} attachments`);
+        return osaJS(OSXcommands.osaSendMessage, appleIDs, message, attachments)
+            .then(responseHandler('osaSendMessage'))
+            .catch(errorHandler('osaSendMessage ' + message));
     },
 
     /**
@@ -59,11 +62,26 @@ export const osa = {
      * @return a promise that resolves to the returned result 
      * @todo enable for multiple `to`s
      */
-    email: (subject:string, to:string[], content='', attachments?:string[]):Promise<any> => { 
+    sendEmail: (subject:string, to:string[], content='', attachments?:string[]):Promise<any> => { 
         log.info(`sending email to '${to.join(', ')}' with subject '${subject}', content '${content}', ${attachments?attachments.length:0} attachments`);
         return osaJS(OSXcommands.osaSendEmail, subject, to[0], content, attachments)
-            .then(responseHandler)
-            .catch(errorHandler('email ' + subject));
+            .then(responseHandler('osaSendEmail'))
+            .catch(errorHandler('osaSendEmail ' + subject));
+    },
+
+    /**
+     * sends an email to the list of addresses.
+     * @param subject the subject of the message to send
+     * @param addresses an array of recipient email addresses
+     * @param content optional; the content of the message to send
+     * @return a promise that resolves to the returned result 
+     * @todo enable for multiple `to`s
+     */
+    getEmail: (date:Date):Promise<any> => { 
+        log.debug(`getting emails`);
+        return osaJS(OSXcommands.osaGetEmail, date)
+            .then(responseHandler('osaGetEmail'))
+            .catch(errorHandler('osaGetEmail'));
     },
 
     /**
@@ -74,7 +92,6 @@ export const osa = {
     facetime: (appleID:string) :Promise<any>=> { 
         log.info('starting facetime call with ' + appleID);
         return cp.exec('open facetime://' + appleID)
-            .then(responseHandler)
             .catch(errorHandler('facetime ' + appleID));
     },
 
@@ -86,9 +103,9 @@ export const osa = {
     say: (text:string):Promise<any> => { 
         log.info('saying \'' + text + '\'');
         return osaJS(OSXcommands.osaSay, text)
-            .then(responseHandler)
+            .then(responseHandler('osaSay'))
             .then(() => `I said '${text}'`)
-            .catch(errorHandler('say ' + text));
+            .catch(errorHandler('osaSay ' + text));
     },
 
     /**
@@ -99,12 +116,12 @@ export const osa = {
     launch: (name:string):Promise<any> => { 
         log.info('launching \'' + name + '\'');
         return osaJS(OSXcommands.osaLaunch, name)
-            .then(responseHandler)
+            .then(responseHandler('osaLaunch'))
             .then(result => {
                 log.info(name + ' running: ' + result);
                 return result? true : false;
             })
-            .catch(errorHandler('launch ' + name));
+            .catch(errorHandler('osaLaunch ' + name));
     },
 
     /**
@@ -115,12 +132,12 @@ export const osa = {
     launchScript: (name:string):Promise<any> => { 
         log.info('launching \'' + name + '\'');
         return osaJS(OSXcommands.osaLaunchScript, name)
-            .then(responseHandler)
+            .then(responseHandler('osaLaunchScript'))
             .then(result => {
                 log.info(name + ' running: ' + result);
                 return result? true : false;
             })
-            .catch(errorHandler('launchScript ' + name));
+            .catch(errorHandler('osaLaunchScript ' + name));
     },
 
 
@@ -134,12 +151,12 @@ export const osa = {
         if (i>0) { name = name.substr(i+1); }
         log.info('quitting \'' + name + '\'');
         return osaJS(OSXcommands.osaQuit, name)
-            .then(responseHandler)
+            .then(responseHandler('osaQuit'))
             .then(result => {
                 log.debug(name + ' running: ' + result);
                 return result? false : true;
             })
-            .catch(errorHandler('quit ' + name));
+            .catch(errorHandler('osaQuit ' + name));
     },
 
     /**
@@ -151,7 +168,7 @@ export const osa = {
         name = name.substring(name.lastIndexOf('/')+1,name.lastIndexOf('.'));
         log.info('checking if \'' + name + '\' is running');
         return cp.exec('ps -cx')
-            .then(result => (result.out.indexOf(name) > 0))
+            .then(result => (result.stdout.indexOf(name) > 0))
             .catch(errorHandler('isRunning ' + name));
     },
 
@@ -163,8 +180,8 @@ export const osa = {
     setBrightness: (value:number):Promise<any> => {
         log.info('setting brightness to ' + value);
         return osaJS(OSXcommands.osaBrightness, value)
-            .then(responseHandler)
-            .catch(errorHandler('setBrightness ' + value));
+            .then(responseHandler('osaBrightness'))
+            .catch(errorHandler('osaBrightness ' + value));
     },
 
     /**
@@ -175,8 +192,8 @@ export const osa = {
     setVolume: (value:number):Promise<any> => {
         log.info('setting volume to ' + value);
         return osaJS(OSXcommands.osaVolume, value)
-            .then(responseHandler)
-            .catch(errorHandler('setVolume ' + value));
+            .then(responseHandler('osaVolume'))
+            .catch(errorHandler('osaVolume ' + value));
     },
 
     /**
@@ -186,22 +203,7 @@ export const osa = {
     restart: ():Promise<any> => {
         log.info('restarting...');
         return osaJS(OSXcommands.osaRestart)
-            .then(responseHandler)
-            .catch(errorHandler('restart '));
-    },
-
-    /*
-    * @ngdoc function
-    * @name listenToMessages
-    * @methodOf hsAlarmServer.hsOSA
-    * @description listens to incoming messages on iMessage.
-    * @return {Promise} a promise that resolves to the received message 
-    *
-    exports.listenToMessages = () => {
-        log.info('listening to iMessages');
-        return osa(osaClient.osaMessageListen)
-            .then(listenHandler)
-            .catch(errorHandler('listenToMessages '));
-    };
-    */
+            .then(responseHandler('osaRestart'))
+            .catch(errorHandler('osaRestart '));
+    }
 };
