@@ -50,11 +50,12 @@ module.exports = (grunt, dir, dependencies, type) => {
     registerBuildTasks(type);
    
     //------ Add other MultiTasks
-    grunt.registerTask('make',    ['build', 'test', 'doc', 'stage']);
-    grunt.registerTask('once',    ['make']);	
-    grunt.registerTask('default', ['make', 'watch']);	
-    grunt.registerTask('product', ['buildMin', 'doc', 'stage']);	
-    grunt.registerTask('travis',  ['build', 'test']);	
+    grunt.registerTask('make',      ['build', 'test', 'doc', 'stage']);
+    grunt.registerTask('makeShort', ['build', 'stage']);
+    grunt.registerTask('once',      ['make']);	
+    grunt.registerTask('default',   ['makeShort', 'watch']);	
+    grunt.registerTask('product',   ['buildMin', 'doc', 'stage']);	
+    grunt.registerTask('travis',    ['build', 'test']);	
 
     grunt.registerMultiTask('sourceCode', translateSources);  
 
@@ -95,9 +96,6 @@ module.exports = (grunt, dir, dependencies, type) => {
             htmlGH: { files: [
                 { expand:true, cwd: devPath,    // index.html and indexGH.html
                     src:['index.html', 'indexGH.html'], dest:'_dist/docs' 
-                },
-                { expand:true, cwd: devPath,    // index.html and indexGH.html
-                    src:['index.html', 'indexGH.html'], dest:'_dist/bin' 
                 }
             ]},
             example:{ expand:true, cwd: 'src/example', 
@@ -115,13 +113,15 @@ module.exports = (grunt, dir, dependencies, type) => {
             ]},
             app2NPM: { files: [ 
                 { expand:true, cwd: '_dist/bin',        // copy everything from _dist/bin
-                src:['**/*'], dest:`node_modules/${libPath}/` }
+                    src:['**/*'], dest:`node_modules/${libPath}/` },
+                { expand:true, cwd: devPath,            // index.html and indexGH.html
+                    src:['index.html', 'indexGH.html'], dest:`node_modules/${libPath}/` }
             ]},
             docs2NPM:   { files: [                      // copy the module's typeodc json  
                 { expand:true, cwd: '_dist/docs', 
-                    src:['**/*.json'], dest:`node_modules/${libPath}`},
+                    src:['**/*.json'], dest:`node_modules/${libPath}/docs`},
                 { expand:true, cwd: '_dist/',           // copy examples to npm docs
-                    src:['example/**/*'], dest:`node_modules/${libPath}` }, 
+                    src:['example/**/*'], dest:`node_modules/${libPath}/docs` }, 
             ]},
 		    test: { files: [
                 { expand:true, cwd:'_dist/',    
@@ -264,7 +264,7 @@ module.exports = (grunt, dir, dependencies, type) => {
 			},
 			js: {
 				files: ['src/**/*.ts', '!src/**/*.spec.ts', '!src/**/*.less'],
-				tasks: ['make']
+				tasks: ['makeShort']
 			},
 			less: {
 				files: ['src/**/*.less'],
