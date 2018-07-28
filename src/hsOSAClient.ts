@@ -16,6 +16,10 @@ declare const Application:ApplicationIF;
  * Open Scripting Architecture (OSA).
  */
 export const OSXcommands = {
+    osaGetMessage: function(updatedSince:Date) {
+        const Messages = Application("Messages");
+        Messages.includeStandardAdditions = true;
+    },
     /**
      * sends a message via thew OSX Messages app
      */
