@@ -6,8 +6,8 @@
 
 import { cp }           from 'hsnode';
 import { Log }          from 'hsnode';    const log = new Log('hsOSA');
-import { OSXcommands}   from './hsOSAClient';
-import { osaJS }        from './osalib';
+import { OSXcommands}   from './osaCalls';
+import { osaJS }        from './osaLib';
 
 /**
  * standard response handler for `osaJS` calls.

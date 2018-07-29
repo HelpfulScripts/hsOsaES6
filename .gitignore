@@ -3,4 +3,3 @@ _example
 node_modules
 .DS_Store
 .tscache
-docs
