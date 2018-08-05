@@ -1,0 +1,52 @@
+{
+  "name": "hsosaes6",
+  "version": "1.1.2",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "keywords": [
+    "osa",
+    "osx",
+    "es6",
+    "javascript",
+    "applescript",
+    "osascript",
+    "automation",
+    "mac"
+  ],
+  "description": "Helpful Scripts OSA automation via Javascript",
+  "homepage": "https://helpfulscripts.github.io/hsOsaES6/indexGH.html#!/api/hsOsaES6/0",
+  "author": {
+    "name": "masterscripter",
+    "email": "helpfulscripts@gmail.com"
+  },
+  "scripts": {
+    "build": "grunt travis",
+    "test": "grunt test"
+  },
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "plugins": [],
+  "devDependencies": {
+    "@types/node": "^7.0.66",
+    "grunt": "^1.0.3",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-ts": "^6.0.0-beta.19",
+    "grunt-tslint": "^4.0.1",
+    "grunt-typedoc": "^0.2.4",
+    "grunt-webpack": "^3.1.2",
+    "tslint": "^4.5.1",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.9.2",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.14.0"
+  },
+  "dependencies": {
+    "hsnode": "^2.2.7"
+  }
+}

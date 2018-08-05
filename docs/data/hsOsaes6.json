@@ -2141,7 +2141,7 @@
 			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/overview.ts",
 			"comment": {
 				"shortText": "# hsOsaES6",
-				"text": "Helpful Scripts ES6 interface to various OSX functions using the OSA Architecture.\n[Github page](https://github.com/HelpfulScripts/hsOsaES6)\n\n"
+				"text": "Helpful Scripts ES6 interface to various OSX functions using the OSA Architecture.\n[`[Github page]`](https://github.com/HelpfulScripts/hsOsaES6)\n[`[Coverage Info]`](./data/src/hsOsaES6/coverage/)\n___\n\n"
 			},
 			"sources": [
 				{
