@@ -1,5 +1,6 @@
 _coverage
 _example
 node_modules
+lcov-report
 .DS_Store
 .tscache
