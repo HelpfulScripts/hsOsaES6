@@ -1,3 +1,2 @@
 export { osaJS } from './osaLib';
-export { OSXcommands } from './osaCalls';
-export { osa } from './Commands';
+export { osaCommands } from './osaCommands';

@@ -10,5 +10,6 @@ export declare const OSXcommands: {
     osaCallFacetime: () => boolean;
     osaBrightness: (value: number) => boolean;
     osaVolume: (value: string) => boolean;
+    osaVolumeSettings: () => any;
     osaRestart: () => boolean;
 };

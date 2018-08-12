@@ -1,13 +1,24 @@
-// import { Application, Path, delay } from './OSA';
+/**
+ * ## osaCalls
+ * 
+ * {@link osaCalls.OSXcomands} provides Javascript functions that run within Apple's OSA context.
+ * These functions are called internally by {@link Commands.osaCommands osaCommands}.
+ * The implementation is in Typescript to benefit from as much compiler help as possible.
+ */
 
+/** declares the Path function available within OSA. */
 declare function Path(name:string):any;
+
+/** declares the delay function available within OSA */
 declare function delay(ms:number):void;
 
+/** declares the Application interface availabkle withon OSA */
 declare interface ApplicationIF {
     (name?:string):any;
     currentApplication: ()=>any;
   }
 
+/** declares the Application object available within OSA */
 declare const Application:ApplicationIF;
 
 
@@ -159,6 +170,15 @@ export const OSXcommands = {
         app.includeStandardAdditions = true;
         app.setVolume(parseInt(value));
         return true;
+    },
+    /**
+     * Sets the OSX System Volume
+     */
+    osaVolumeSettings: () => {
+        const app = Application.currentApplication();
+        app.includeStandardAdditions = true;
+        const settings = app.getVolumeSettings();
+        return settings;
     },
     /**
      * Restarts OSX

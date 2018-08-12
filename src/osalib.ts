@@ -41,6 +41,7 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise<any> {
 
     // build a string to call osaFunction, pass in args, and evaulate to
     // the JSON representation of the return value, then call it with osascript
+    log.debug(osaFunction.toString());
     const functionCallString = consoleLogPatch + 'JSON.stringify((' + osaFunction.toString() + ')(' + jsonArgs + '));';
     const escapedCall = functionCallString
         .replace(/ +/g, ' ')      // replace multiple whitespaces by single whitespaces

@@ -1,4 +1,4 @@
-export declare const osa: {
+export declare const osaCommands: {
     sendMessage: (appleIDs: string[], message: string, attachments?: string[]) => Promise<any>;
     sendEmail: (subject: string, to: string[], content?: string, attachments?: string[]) => Promise<any>;
     getEmail: (date: Date) => Promise<any>;
@@ -10,5 +10,6 @@ export declare const osa: {
     isRunning: (name: string) => Promise<any>;
     setBrightness: (value: number) => Promise<any>;
     setVolume: (value: number) => Promise<any>;
+    getVolume: () => Promise<any>;
     restart: () => Promise<any>;
 };

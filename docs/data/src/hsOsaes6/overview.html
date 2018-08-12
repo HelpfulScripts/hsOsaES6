@@ -21,8 +21,28 @@
 <span id=6 class="line">&nbsp;&nbsp;&nbsp;6</span>&nbsp;*&nbsp;[`[Coverage&nbsp;Info]`](./data/src/hsOsaES6/coverage/)<br>
 <span id=7 class="line">&nbsp;&nbsp;&nbsp;7</span>&nbsp;*&nbsp;___<br>
 <span id=8 class="line">&nbsp;&nbsp;&nbsp;8</span>&nbsp;*&nbsp;<br>
-<span id=9 class="line">&nbsp;&nbsp;&nbsp;9</span>&nbsp;*/</comment><br>
-<span id=10 class="line">&nbsp;&nbsp;10</span><br>
-<span id=11 class="line">&nbsp;&nbsp;11</span>&nbsp;<comment>/**&nbsp;*/</comment><br></code></div>
+<span id=9 class="line">&nbsp;&nbsp;&nbsp;9</span>&nbsp;*&nbsp;Provides&nbsp;a&nbsp;means&nbsp;for&nbsp;calling&nbsp;JavaScript&nbsp;functions&nbsp;in&nbsp;Apple's&nbsp;OSA&nbsp;environment.&nbsp;<br>
+<span id=10 class="line">&nbsp;&nbsp;10</span>&nbsp;*&nbsp;At&nbsp;the&nbsp;core,&nbsp;the&nbsp;function&nbsp;{@link&nbsp;osaLib.osaJS&nbsp;osaJS}&nbsp;is&nbsp;a&nbsp;port&nbsp;from&nbsp;[brandonhorst's&nbsp;node-osa](https://github.com/brandonhorst/node-osa)&nbsp;module,<br>
+<span id=11 class="line">&nbsp;&nbsp;11</span>&nbsp;*&nbsp;in&nbsp;ES6&nbsp;using&nbsp;Typescript&nbsp;and&nbsp;promises.<br>
+<span id=12 class="line">&nbsp;&nbsp;12</span>&nbsp;*&nbsp;<br>
+<span id=13 class="line">&nbsp;&nbsp;13</span>&nbsp;*&nbsp;`osaJs`&nbsp;is&nbsp;internally&nbsp;called&nbsp;by&nbsp;a&nbsp;number&nbsp;of&nbsp;OSX&nbsp;convenience&nbsp;functions&nbsp;exported&nbsp;as&nbsp;<br>
+<span id=14 class="line">&nbsp;&nbsp;14</span>&nbsp;*&nbsp;{@link&nbsp;Commands.osaCommands&nbsp;osaCommands}.<br>
+<span id=15 class="line">&nbsp;&nbsp;15</span>&nbsp;*&nbsp;Currently&nbsp;available&nbsp;functions&nbsp;are:<br>
+<span id=16 class="line">&nbsp;&nbsp;16</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.facetime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;facetime}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;starts&nbsp;a&nbsp;facetime&nbsp;call&nbsp;with&nbsp;a&nbsp;buddy<br>
+<span id=17 class="line">&nbsp;&nbsp;17</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.getEmail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getEmail}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gets&nbsp;recent&nbsp;emails&nbsp;from&nbsp;`Mail`<br>
+<span id=18 class="line">&nbsp;&nbsp;18</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.sendEmail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sendEmail}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sends&nbsp;an&nbsp;email&nbsp;using&nbsp;`Mail`<br>
+<span id=19 class="line">&nbsp;&nbsp;19</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.launch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;launch}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;launches&nbsp;an&nbsp;application&nbsp;(such&nbsp;as&nbsp;`Mail`)<br>
+<span id=20 class="line">&nbsp;&nbsp;20</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.isRunning&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isRunning}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checks&nbsp;if&nbsp;an&nbsp;application&nbsp;is&nbsp;running<br>
+<span id=21 class="line">&nbsp;&nbsp;21</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.quit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quit}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quits&nbsp;a&nbsp;running&nbsp;application<br>
+<span id=22 class="line">&nbsp;&nbsp;22</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.launchScript&nbsp;&nbsp;launchScript}&nbsp;&nbsp;launches&nbsp;another&nbsp;OSA&nbsp;script<br>
+<span id=23 class="line">&nbsp;&nbsp;23</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.restart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restart}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restarts&nbsp;the&nbsp;Mac<br>
+<span id=24 class="line">&nbsp;&nbsp;24</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.sendMessage&nbsp;&nbsp;&nbsp;sendMessage}&nbsp;&nbsp;&nbsp;sends&nbsp;a&nbsp;text&nbsp;message&nbsp;to&nbsp;a&nbsp;buddy&nbsp;via&nbsp;`Messages`<br>
+<span id=25 class="line">&nbsp;&nbsp;25</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.setVolume&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setVolume}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets&nbsp;the&nbsp;speaker&nbsp;volume&nbsp;<br>
+<span id=26 class="line">&nbsp;&nbsp;26</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.say&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;say}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;speaks&nbsp;a&nbsp;text&nbsp;string&nbsp;using&nbsp;the&nbsp;built-in&nbsp;voice&nbsp;synthesis<br>
+<span id=27 class="line">&nbsp;&nbsp;27</span>&nbsp;*&nbsp;-&nbsp;&nbsp;&nbsp;{@link&nbsp;Commands.osaCommands.setBrightness&nbsp;setBrightness}&nbsp;sets&nbsp;the&nbsp;screen&nbsp;brightness<br>
+<span id=28 class="line">&nbsp;&nbsp;28</span>&nbsp;*&nbsp;<br>
+<span id=29 class="line">&nbsp;&nbsp;29</span>&nbsp;*/</comment><br>
+<span id=30 class="line">&nbsp;&nbsp;30</span><br>
+<span id=31 class="line">&nbsp;&nbsp;31</span>&nbsp;<comment>/**&nbsp;*/</comment><br></code></div>
                 </body>
             

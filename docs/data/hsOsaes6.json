@@ -5,17 +5,994 @@
 	"flags": {},
 	"children": [
 		{
-			"id": 66,
-			"name": "\"Commands\"",
+			"id": 119,
+			"name": "\"index\"",
 			"kind": 1,
 			"kindString": "External module",
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/Commands.ts",
+			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/index.ts",
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 12,
+			"name": "\"osaCalls\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/osaCalls.ts",
+			"comment": {
+				"shortText": "## osaCalls",
+				"text": "{@link osaCalls.OSXcomands} provides Javascript functions that run within Apple's OSA context.\nThese functions are called internally by {@link Commands.osaCommands osaCommands}.\nThe implementation is in Typescript to benefit from as much compiler help as possible.\n"
+			},
 			"children": [
 				{
-					"id": 67,
+					"id": 13,
+					"name": "ApplicationIF",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"comment": {
+						"shortText": "declares the Application interface availabkle withon OSA"
+					},
+					"signatures": [
+						{
+							"id": 14,
+							"name": "__call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "declares the Application interface availabkle withon OSA"
+							},
+							"parameters": [
+								{
+									"id": 15,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"children": [
+						{
+							"id": 16,
+							"name": "currentApplication",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 18,
+									"character": 22
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 17,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 18,
+											"name": "__call",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "osaCalls.ts",
+											"line": 18,
+											"character": 23
+										}
+									]
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								16
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "osaCalls.ts",
+							"line": 16,
+							"character": 31
+						}
+					]
+				},
+				{
+					"id": 25,
+					"name": "Application",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "declares the Application object available within OSA"
+					},
+					"sources": [
+						{
+							"fileName": "osaCalls.ts",
+							"line": 22,
+							"character": 25
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ApplicationIF",
+						"id": 13
+					}
+				},
+				{
+					"id": 19,
+					"name": "Path",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 20,
+							"name": "Path",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "declares the Path function available within OSA."
+							},
+							"parameters": [
+								{
+									"id": 21,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "osaCalls.ts",
+							"line": 10,
+							"character": 21
+						}
+					]
+				},
+				{
+					"id": 22,
+					"name": "delay",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 23,
+							"name": "delay",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "declares the delay function available within OSA"
+							},
+							"parameters": [
+								{
+									"id": 24,
+									"name": "ms",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "osaCalls.ts",
+							"line": 13,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 26,
+					"name": "OSXcommands",
+					"kind": 2097152,
+					"kindString": "Object literal",
+					"flags": {
+						"isExported": true,
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Collection of client-side (OSA-side) OSX scripts to be executed in the context of Apple's\nOpen Scripting Architecture (OSA)."
+					},
+					"children": [
+						{
+							"id": 58,
+							"name": "osaBrightness",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Sets the screen brightness on OSX"
+							},
+							"signatures": [
+								{
+									"id": 59,
+									"name": "osaBrightness",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Sets the screen brightness on OSX"
+									},
+									"parameters": [
+										{
+											"id": 60,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 146,
+									"character": 17
+								}
+							]
+						},
+						{
+							"id": 56,
+							"name": "osaCallFacetime",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Initiates a Facetime call on OSX"
+							},
+							"signatures": [
+								{
+									"id": 57,
+									"name": "osaCallFacetime",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Initiates a Facetime call on OSX"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 135,
+									"character": 19
+								}
+							]
+						},
+						{
+							"id": 41,
+							"name": "osaGetEmail",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "sends an email vis thew OSX Mail app"
+							},
+							"signatures": [
+								{
+									"id": 42,
+									"name": "osaGetEmail",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "sends an email vis thew OSX Mail app"
+									},
+									"parameters": [
+										{
+											"id": 43,
+											"name": "date",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "any"
+										}
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 73,
+									"character": 15
+								}
+							]
+						},
+						{
+							"id": 27,
+							"name": "osaGetMessage",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 28,
+									"name": "osaGetMessage",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 29,
+											"name": "updatedSince",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "Date"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 30,
+									"character": 17
+								}
+							]
+						},
+						{
+							"id": 47,
+							"name": "osaLaunch",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "launches an OSX app"
+							},
+							"signatures": [
+								{
+									"id": 48,
+									"name": "osaLaunch",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "launches an OSX app"
+									},
+									"parameters": [
+										{
+											"id": 49,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 109,
+									"character": 13
+								}
+							]
+						},
+						{
+							"id": 50,
+							"name": "osaLaunchScript",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "launches a script on OSX"
+							},
+							"signatures": [
+								{
+									"id": 51,
+									"name": "osaLaunchScript",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "launches a script on OSX"
+									},
+									"parameters": [
+										{
+											"id": 52,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 118,
+									"character": 19
+								}
+							]
+						},
+						{
+							"id": 53,
+							"name": "osaQuit",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Quits an OSX app"
+							},
+							"signatures": [
+								{
+									"id": 54,
+									"name": "osaQuit",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Quits an OSX app"
+									},
+									"parameters": [
+										{
+											"id": 55,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 127,
+									"character": 11
+								}
+							]
+						},
+						{
+							"id": 66,
+							"name": "osaRestart",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Restarts OSX"
+							},
+							"signatures": [
+								{
+									"id": 67,
+									"name": "osaRestart",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Restarts OSX"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 186,
+									"character": 14
+								}
+							]
+						},
+						{
+							"id": 44,
+							"name": "osaSay",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "speaks a text on OSX Speech Services"
+							},
+							"signatures": [
+								{
+									"id": 45,
+									"name": "osaSay",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "speaks a text on OSX Speech Services"
+									},
+									"parameters": [
+										{
+											"id": 46,
+											"name": "text",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 98,
+									"character": 10
+								}
+							]
+						},
+						{
+							"id": 35,
+							"name": "osaSendEmail",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "sends an email vis thew OSX Mail app"
+							},
+							"signatures": [
+								{
+									"id": 36,
+									"name": "osaSendEmail",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "sends an email vis thew OSX Mail app"
+									},
+									"parameters": [
+										{
+											"id": 37,
+											"name": "subject",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 38,
+											"name": "address",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 39,
+											"name": "content",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 40,
+											"name": "attachments",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 50,
+									"character": 16
+								}
+							]
+						},
+						{
+							"id": 30,
+							"name": "osaSendMessage",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "sends a message via thew OSX Messages app"
+							},
+							"signatures": [
+								{
+									"id": 31,
+									"name": "osaSendMessage",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "sends a message via thew OSX Messages app"
+									},
+									"parameters": [
+										{
+											"id": 32,
+											"name": "appleIDs",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											}
+										},
+										{
+											"id": 33,
+											"name": "message",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 34,
+											"name": "attachments",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 37,
+									"character": 18
+								}
+							]
+						},
+						{
+							"id": 61,
+							"name": "osaVolume",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Sets the OSX System Volume"
+							},
+							"signatures": [
+								{
+									"id": 62,
+									"name": "osaVolume",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Sets the OSX System Volume"
+									},
+									"parameters": [
+										{
+											"id": 63,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 168,
+									"character": 13
+								}
+							]
+						},
+						{
+							"id": 64,
+							"name": "osaVolumeSettings",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Sets the OSX System Volume"
+							},
+							"signatures": [
+								{
+									"id": 65,
+									"name": "osaVolumeSettings",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Sets the OSX System Volume"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCalls.ts",
+									"line": 177,
+									"character": 21
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Functions",
+							"kind": 64,
+							"children": [
+								58,
+								56,
+								41,
+								27,
+								47,
+								50,
+								53,
+								66,
+								44,
+								35,
+								30,
+								61,
+								64
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "osaCalls.ts",
+							"line": 29,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "object"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						13
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						25
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						19,
+						22
+					]
+				},
+				{
+					"title": "Object literals",
+					"kind": 2097152,
+					"children": [
+						26
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "osaCalls.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 68,
+			"name": "\"osaCommands\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/osaCommands.ts",
+			"children": [
+				{
+					"id": 69,
 					"name": "log",
 					"kind": 32,
 					"kindString": "Variable",
@@ -24,7 +1001,7 @@
 					},
 					"sources": [
 						{
-							"fileName": "Commands.ts",
+							"fileName": "osaCommands.ts",
 							"line": 8,
 							"character": 51
 						}
@@ -33,10 +1010,10 @@
 						"type": "reference",
 						"name": "Log"
 					},
-					"defaultValue": " new Log('hsOSA')"
+					"defaultValue": " new Log('osaCommands')"
 				},
 				{
-					"id": 71,
+					"id": 73,
 					"name": "errorHandler",
 					"kind": 64,
 					"kindString": "Function",
@@ -48,7 +1025,7 @@
 					},
 					"signatures": [
 						{
-							"id": 72,
+							"id": 74,
 							"name": "errorHandler",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -58,7 +1035,7 @@
 							},
 							"parameters": [
 								{
-									"id": 73,
+									"id": 75,
 									"name": "cmd",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -80,14 +1057,14 @@
 					],
 					"sources": [
 						{
-							"fileName": "Commands.ts",
-							"line": 29,
+							"fileName": "osaCommands.ts",
+							"line": 35,
 							"character": 18
 						}
 					]
 				},
 				{
-					"id": 68,
+					"id": 70,
 					"name": "responseHandler",
 					"kind": 64,
 					"kindString": "Function",
@@ -99,7 +1076,7 @@
 					},
 					"signatures": [
 						{
-							"id": 69,
+							"id": 71,
 							"name": "responseHandler",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -109,7 +1086,7 @@
 							},
 							"parameters": [
 								{
-									"id": 70,
+									"id": 72,
 									"name": "cmd",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -128,15 +1105,15 @@
 					],
 					"sources": [
 						{
-							"fileName": "Commands.ts",
-							"line": 16,
+							"fileName": "osaCommands.ts",
+							"line": 18,
 							"character": 21
 						}
 					]
 				},
 				{
-					"id": 74,
-					"name": "osa",
+					"id": 76,
+					"name": "osaCommands",
 					"kind": 2097152,
 					"kindString": "Object literal",
 					"flags": {
@@ -148,7 +1125,7 @@
 					},
 					"children": [
 						{
-							"id": 89,
+							"id": 91,
 							"name": "facetime",
 							"kind": 64,
 							"kindString": "Function",
@@ -161,7 +1138,7 @@
 							},
 							"signatures": [
 								{
-									"id": 90,
+									"id": 92,
 									"name": "facetime",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -172,7 +1149,7 @@
 									},
 									"parameters": [
 										{
-											"id": 91,
+											"id": 93,
 											"name": "appleID",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -200,14 +1177,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 92,
+									"fileName": "osaCommands.ts",
+									"line": 98,
 									"character": 12
 								}
 							]
 						},
 						{
-							"id": 86,
+							"id": 88,
 							"name": "getEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -226,7 +1203,7 @@
 							},
 							"signatures": [
 								{
-									"id": 87,
+									"id": 89,
 									"name": "getEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -237,7 +1214,7 @@
 									},
 									"parameters": [
 										{
-											"id": 88,
+											"id": 90,
 											"name": "date",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -262,14 +1239,57 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 80,
+									"fileName": "osaCommands.ts",
+									"line": 86,
 									"character": 12
 								}
 							]
 						},
 						{
-							"id": 104,
+							"id": 115,
+							"name": "getVolume",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "sets the system audio volume to the specified value.",
+								"returns": "a promise that resolves to undefined\n"
+							},
+							"signatures": [
+								{
+									"id": 116,
+									"name": "getVolume",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "sets the system audio volume to the specified value.",
+										"returns": "a promise that resolves to undefined\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Promise",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "osaCommands.ts",
+									"line": 214,
+									"character": 13
+								}
+							]
+						},
+						{
+							"id": 106,
 							"name": "isRunning",
 							"kind": 64,
 							"kindString": "Function",
@@ -282,7 +1302,7 @@
 							},
 							"signatures": [
 								{
-									"id": 105,
+									"id": 107,
 									"name": "isRunning",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -293,7 +1313,7 @@
 									},
 									"parameters": [
 										{
-											"id": 106,
+											"id": 108,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -321,14 +1341,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 167,
+									"fileName": "osaCommands.ts",
+									"line": 173,
 									"character": 13
 								}
 							]
 						},
 						{
-							"id": 95,
+							"id": 97,
 							"name": "launch",
 							"kind": 64,
 							"kindString": "Function",
@@ -341,7 +1361,7 @@
 							},
 							"signatures": [
 								{
-									"id": 96,
+									"id": 98,
 									"name": "launch",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -352,7 +1372,7 @@
 									},
 									"parameters": [
 										{
-											"id": 97,
+											"id": 99,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -380,14 +1400,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 116,
+									"fileName": "osaCommands.ts",
+									"line": 122,
 									"character": 10
 								}
 							]
 						},
 						{
-							"id": 98,
+							"id": 100,
 							"name": "launchScript",
 							"kind": 64,
 							"kindString": "Function",
@@ -400,7 +1420,7 @@
 							},
 							"signatures": [
 								{
-									"id": 99,
+									"id": 101,
 									"name": "launchScript",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -411,7 +1431,7 @@
 									},
 									"parameters": [
 										{
-											"id": 100,
+											"id": 102,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -439,14 +1459,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 132,
+									"fileName": "osaCommands.ts",
+									"line": 138,
 									"character": 16
 								}
 							]
 						},
 						{
-							"id": 101,
+							"id": 103,
 							"name": "quit",
 							"kind": 64,
 							"kindString": "Function",
@@ -459,7 +1479,7 @@
 							},
 							"signatures": [
 								{
-									"id": 102,
+									"id": 104,
 									"name": "quit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -470,7 +1490,7 @@
 									},
 									"parameters": [
 										{
-											"id": 103,
+											"id": 105,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -498,14 +1518,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 149,
+									"fileName": "osaCommands.ts",
+									"line": 155,
 									"character": 8
 								}
 							]
 						},
 						{
-							"id": 113,
+							"id": 117,
 							"name": "restart",
 							"kind": 64,
 							"kindString": "Function",
@@ -518,7 +1538,7 @@
 							},
 							"signatures": [
 								{
-									"id": 114,
+									"id": 118,
 									"name": "restart",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -541,14 +1561,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 203,
+									"fileName": "osaCommands.ts",
+									"line": 225,
 									"character": 11
 								}
 							]
 						},
 						{
-							"id": 92,
+							"id": 94,
 							"name": "say",
 							"kind": 64,
 							"kindString": "Function",
@@ -561,7 +1581,7 @@
 							},
 							"signatures": [
 								{
-									"id": 93,
+									"id": 95,
 									"name": "say",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -572,7 +1592,7 @@
 									},
 									"parameters": [
 										{
-											"id": 94,
+											"id": 96,
 											"name": "text",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -600,14 +1620,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 103,
+									"fileName": "osaCommands.ts",
+									"line": 109,
 									"character": 7
 								}
 							]
 						},
 						{
-							"id": 80,
+							"id": 82,
 							"name": "sendEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -626,7 +1646,7 @@
 							},
 							"signatures": [
 								{
-									"id": 81,
+									"id": 83,
 									"name": "sendEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -637,7 +1657,7 @@
 									},
 									"parameters": [
 										{
-											"id": 82,
+											"id": 84,
 											"name": "subject",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -651,7 +1671,7 @@
 											}
 										},
 										{
-											"id": 83,
+											"id": 85,
 											"name": "to",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -665,7 +1685,7 @@
 											}
 										},
 										{
-											"id": 84,
+											"id": 86,
 											"name": "content",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -680,7 +1700,7 @@
 											"defaultValue": "\"\""
 										},
 										{
-											"id": 85,
+											"id": 87,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -710,14 +1730,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 65,
+									"fileName": "osaCommands.ts",
+									"line": 71,
 									"character": 13
 								}
 							]
 						},
 						{
-							"id": 75,
+							"id": 77,
 							"name": "sendMessage",
 							"kind": 64,
 							"kindString": "Function",
@@ -730,7 +1750,7 @@
 							},
 							"signatures": [
 								{
-									"id": 76,
+									"id": 78,
 									"name": "sendMessage",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -741,7 +1761,7 @@
 									},
 									"parameters": [
 										{
-											"id": 77,
+											"id": 79,
 											"name": "appleIDs",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -758,7 +1778,7 @@
 											}
 										},
 										{
-											"id": 78,
+											"id": 80,
 											"name": "message",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -772,7 +1792,7 @@
 											}
 										},
 										{
-											"id": 79,
+											"id": 81,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -802,14 +1822,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 50,
+									"fileName": "osaCommands.ts",
+									"line": 56,
 									"character": 15
 								}
 							]
 						},
 						{
-							"id": 107,
+							"id": 109,
 							"name": "setBrightness",
 							"kind": 64,
 							"kindString": "Function",
@@ -822,7 +1842,7 @@
 							},
 							"signatures": [
 								{
-									"id": 108,
+									"id": 110,
 									"name": "setBrightness",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -833,7 +1853,7 @@
 									},
 									"parameters": [
 										{
-											"id": 109,
+											"id": 111,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -861,14 +1881,14 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 180,
+									"fileName": "osaCommands.ts",
+									"line": 190,
 									"character": 17
 								}
 							]
 						},
 						{
-							"id": 110,
+							"id": 112,
 							"name": "setVolume",
 							"kind": 64,
 							"kindString": "Function",
@@ -881,7 +1901,7 @@
 							},
 							"signatures": [
 								{
-									"id": 111,
+									"id": 113,
 									"name": "setVolume",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -892,7 +1912,7 @@
 									},
 									"parameters": [
 										{
-											"id": 112,
+											"id": 114,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -920,8 +1940,8 @@
 							],
 							"sources": [
 								{
-									"fileName": "Commands.ts",
-									"line": 192,
+									"fileName": "osaCommands.ts",
+									"line": 202,
 									"character": 13
 								}
 							]
@@ -932,940 +1952,26 @@
 							"title": "Functions",
 							"kind": 64,
 							"children": [
-								89,
-								86,
-								104,
-								95,
-								98,
-								101,
-								113,
-								92,
-								80,
-								75,
-								107,
-								110
+								91,
+								88,
+								115,
+								106,
+								97,
+								100,
+								103,
+								117,
+								94,
+								82,
+								77,
+								109,
+								112
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "Commands.ts",
-							"line": 43,
-							"character": 16
-						}
-					],
-					"type": {
-						"type": "intrinsic",
-						"name": "object"
-					}
-				}
-			],
-			"groups": [
-				{
-					"title": "Variables",
-					"kind": 32,
-					"children": [
-						67
-					]
-				},
-				{
-					"title": "Functions",
-					"kind": 64,
-					"children": [
-						71,
-						68
-					]
-				},
-				{
-					"title": "Object literals",
-					"kind": 2097152,
-					"children": [
-						74
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "Commands.ts",
-					"line": 1,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 115,
-			"name": "\"index\"",
-			"kind": 1,
-			"kindString": "External module",
-			"flags": {
-				"isExported": true
-			},
-			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/index.ts",
-			"sources": [
-				{
-					"fileName": "index.ts",
-					"line": 1,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 1,
-			"name": "\"osaCalls\"",
-			"kind": 1,
-			"kindString": "External module",
-			"flags": {
-				"isExported": true
-			},
-			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/osaCalls.ts",
-			"children": [
-				{
-					"id": 2,
-					"name": "ApplicationIF",
-					"kind": 256,
-					"kindString": "Interface",
-					"flags": {},
-					"signatures": [
-						{
-							"id": 3,
-							"name": "__call",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 4,
-									"name": "name",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {
-										"isOptional": true
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
-							}
-						}
-					],
-					"children": [
-						{
-							"id": 5,
-							"name": "currentApplication",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 8,
-									"character": 22
-								}
-							],
-							"type": {
-								"type": "reflection",
-								"declaration": {
-									"id": 6,
-									"name": "__type",
-									"kind": 65536,
-									"kindString": "Type literal",
-									"flags": {},
-									"signatures": [
-										{
-											"id": 7,
-											"name": "__call",
-											"kind": 4096,
-											"kindString": "Call signature",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "any"
-											}
-										}
-									],
-									"sources": [
-										{
-											"fileName": "osaCalls.ts",
-											"line": 8,
-											"character": 23
-										}
-									]
-								}
-							}
-						}
-					],
-					"groups": [
-						{
-							"title": "Properties",
-							"kind": 1024,
-							"children": [
-								5
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "osaCalls.ts",
-							"line": 6,
-							"character": 31
-						}
-					]
-				},
-				{
-					"id": 14,
-					"name": "Application",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {
-						"isConst": true
-					},
-					"sources": [
-						{
-							"fileName": "osaCalls.ts",
-							"line": 11,
-							"character": 25
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "ApplicationIF",
-						"id": 2
-					}
-				},
-				{
-					"id": 8,
-					"name": "Path",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {},
-					"signatures": [
-						{
-							"id": 9,
-							"name": "Path",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 10,
-									"name": "name",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "any"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "osaCalls.ts",
-							"line": 3,
-							"character": 21
-						}
-					]
-				},
-				{
-					"id": 11,
-					"name": "delay",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {},
-					"signatures": [
-						{
-							"id": 12,
-							"name": "delay",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"parameters": [
-								{
-									"id": 13,
-									"name": "ms",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "number"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "void"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "osaCalls.ts",
-							"line": 4,
-							"character": 22
-						}
-					]
-				},
-				{
-					"id": 15,
-					"name": "OSXcommands",
-					"kind": 2097152,
-					"kindString": "Object literal",
-					"flags": {
-						"isExported": true,
-						"isConst": true
-					},
-					"comment": {
-						"shortText": "Collection of client-side (OSA-side) OSX scripts to be executed in the context of Apple's\nOpen Scripting Architecture (OSA)."
-					},
-					"children": [
-						{
-							"id": 47,
-							"name": "osaBrightness",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "Sets the screen brightness on OSX"
-							},
-							"signatures": [
-								{
-									"id": 48,
-									"name": "osaBrightness",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Sets the screen brightness on OSX"
-									},
-									"parameters": [
-										{
-											"id": 49,
-											"name": "value",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "number"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 135,
-									"character": 17
-								}
-							]
-						},
-						{
-							"id": 45,
-							"name": "osaCallFacetime",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "Initiates a Facetime call on OSX"
-							},
-							"signatures": [
-								{
-									"id": 46,
-									"name": "osaCallFacetime",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Initiates a Facetime call on OSX"
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 124,
-									"character": 19
-								}
-							]
-						},
-						{
-							"id": 30,
-							"name": "osaGetEmail",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "sends an email vis thew OSX Mail app"
-							},
-							"signatures": [
-								{
-									"id": 31,
-									"name": "osaGetEmail",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "sends an email vis thew OSX Mail app"
-									},
-									"parameters": [
-										{
-											"id": 32,
-											"name": "date",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "array",
-										"elementType": {
-											"type": "intrinsic",
-											"name": "any"
-										}
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 62,
-									"character": 15
-								}
-							]
-						},
-						{
-							"id": 16,
-							"name": "osaGetMessage",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"signatures": [
-								{
-									"id": 17,
-									"name": "osaGetMessage",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"parameters": [
-										{
-											"id": 18,
-											"name": "updatedSince",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "reference",
-												"name": "Date"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 19,
-									"character": 17
-								}
-							]
-						},
-						{
-							"id": 36,
-							"name": "osaLaunch",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "launches an OSX app"
-							},
-							"signatures": [
-								{
-									"id": 37,
-									"name": "osaLaunch",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "launches an OSX app"
-									},
-									"parameters": [
-										{
-											"id": 38,
-											"name": "name",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 98,
-									"character": 13
-								}
-							]
-						},
-						{
-							"id": 39,
-							"name": "osaLaunchScript",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "launches a script on OSX"
-							},
-							"signatures": [
-								{
-									"id": 40,
-									"name": "osaLaunchScript",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "launches a script on OSX"
-									},
-									"parameters": [
-										{
-											"id": 41,
-											"name": "name",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 107,
-									"character": 19
-								}
-							]
-						},
-						{
-							"id": 42,
-							"name": "osaQuit",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "Quits an OSX app"
-							},
-							"signatures": [
-								{
-									"id": 43,
-									"name": "osaQuit",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Quits an OSX app"
-									},
-									"parameters": [
-										{
-											"id": 44,
-											"name": "name",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 116,
-									"character": 11
-								}
-							]
-						},
-						{
-							"id": 53,
-							"name": "osaRestart",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "Restarts OSX"
-							},
-							"signatures": [
-								{
-									"id": 54,
-									"name": "osaRestart",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Restarts OSX"
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 166,
-									"character": 14
-								}
-							]
-						},
-						{
-							"id": 33,
-							"name": "osaSay",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "speaks a text on OSX Speech Services"
-							},
-							"signatures": [
-								{
-									"id": 34,
-									"name": "osaSay",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "speaks a text on OSX Speech Services"
-									},
-									"parameters": [
-										{
-											"id": 35,
-											"name": "text",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 87,
-									"character": 10
-								}
-							]
-						},
-						{
-							"id": 24,
-							"name": "osaSendEmail",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "sends an email vis thew OSX Mail app"
-							},
-							"signatures": [
-								{
-									"id": 25,
-									"name": "osaSendEmail",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "sends an email vis thew OSX Mail app"
-									},
-									"parameters": [
-										{
-											"id": 26,
-											"name": "subject",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										},
-										{
-											"id": 27,
-											"name": "address",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										},
-										{
-											"id": 28,
-											"name": "content",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										},
-										{
-											"id": 29,
-											"name": "attachments",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "array",
-												"elementType": {
-													"type": "intrinsic",
-													"name": "string"
-												}
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 39,
-									"character": 16
-								}
-							]
-						},
-						{
-							"id": 19,
-							"name": "osaSendMessage",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "sends a message via thew OSX Messages app"
-							},
-							"signatures": [
-								{
-									"id": 20,
-									"name": "osaSendMessage",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "sends a message via thew OSX Messages app"
-									},
-									"parameters": [
-										{
-											"id": 21,
-											"name": "appleIDs",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "array",
-												"elementType": {
-													"type": "intrinsic",
-													"name": "string"
-												}
-											}
-										},
-										{
-											"id": 22,
-											"name": "message",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										},
-										{
-											"id": 23,
-											"name": "attachments",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "array",
-												"elementType": {
-													"type": "intrinsic",
-													"name": "string"
-												}
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 26,
-									"character": 18
-								}
-							]
-						},
-						{
-							"id": 50,
-							"name": "osaVolume",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"comment": {
-								"shortText": "Sets the OSX System Volume"
-							},
-							"signatures": [
-								{
-									"id": 51,
-									"name": "osaVolume",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Sets the OSX System Volume"
-									},
-									"parameters": [
-										{
-											"id": 52,
-											"name": "value",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "boolean"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "osaCalls.ts",
-									"line": 157,
-									"character": 13
-								}
-							]
-						}
-					],
-					"groups": [
-						{
-							"title": "Functions",
-							"kind": 64,
-							"children": [
-								47,
-								45,
-								30,
-								16,
-								36,
-								39,
-								42,
-								53,
-								33,
-								24,
-								19,
-								50
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "osaCalls.ts",
-							"line": 18,
+							"fileName": "osaCommands.ts",
+							"line": 49,
 							"character": 24
 						}
 					],
@@ -1877,45 +1983,38 @@
 			],
 			"groups": [
 				{
-					"title": "Interfaces",
-					"kind": 256,
-					"children": [
-						2
-					]
-				},
-				{
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						14
+						69
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						8,
-						11
+						73,
+						70
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						15
+						76
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "osaCalls.ts",
+					"fileName": "osaCommands.ts",
 					"line": 1,
 					"character": 0
 				}
 			]
 		},
 		{
-			"id": 55,
+			"id": 1,
 			"name": "\"osaLib\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -1925,7 +2024,7 @@
 			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/osaLib.ts",
 			"children": [
 				{
-					"id": 57,
+					"id": 3,
 					"name": "consoleLogPrefix",
 					"kind": 32,
 					"kindString": "Variable",
@@ -1946,7 +2045,7 @@
 					"defaultValue": "\"<node-osa>\""
 				},
 				{
-					"id": 58,
+					"id": 4,
 					"name": "consoleLogSuffix",
 					"kind": 32,
 					"kindString": "Variable",
@@ -1967,7 +2066,7 @@
 					"defaultValue": "\"</node-osa>\""
 				},
 				{
-					"id": 56,
+					"id": 2,
 					"name": "log",
 					"kind": 32,
 					"kindString": "Variable",
@@ -1988,7 +2087,7 @@
 					"defaultValue": " new Log('osalib')"
 				},
 				{
-					"id": 59,
+					"id": 5,
 					"name": "extractLogs",
 					"kind": 64,
 					"kindString": "Function",
@@ -1997,14 +2096,14 @@
 					},
 					"signatures": [
 						{
-							"id": 60,
+							"id": 6,
 							"name": "extractLogs",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 61,
+									"id": 7,
 									"name": "stderr",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2030,7 +2129,7 @@
 					]
 				},
 				{
-					"id": 62,
+					"id": 8,
 					"name": "osaJS",
 					"kind": 64,
 					"kindString": "Function",
@@ -2039,7 +2138,7 @@
 					},
 					"signatures": [
 						{
-							"id": 63,
+							"id": 9,
 							"name": "osaJS",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -2055,7 +2154,7 @@
 							},
 							"parameters": [
 								{
-									"id": 64,
+									"id": 10,
 									"name": "osaFunction",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2066,7 +2165,7 @@
 									}
 								},
 								{
-									"id": 65,
+									"id": 11,
 									"name": "args",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2108,17 +2207,17 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						57,
-						58,
-						56
+						3,
+						4,
+						2
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						59,
-						62
+						5,
+						8
 					]
 				}
 			],
@@ -2131,7 +2230,7 @@
 			]
 		},
 		{
-			"id": 116,
+			"id": 120,
 			"name": "\"overview\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -2141,7 +2240,7 @@
 			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/overview.ts",
 			"comment": {
 				"shortText": "# hsOsaES6",
-				"text": "Helpful Scripts ES6 interface to various OSX functions using the OSA Architecture.\n[`[Github page]`](https://github.com/HelpfulScripts/hsOsaES6)\n[`[Coverage Info]`](./data/src/hsOsaES6/coverage/)\n___\n\n"
+				"text": "Helpful Scripts ES6 interface to various OSX functions using the OSA Architecture.\n[`[Github page]`](https://github.com/HelpfulScripts/hsOsaES6)\n[`[Coverage Info]`](./data/src/hsOsaES6/coverage/)\n___\n\nProvides a means for calling JavaScript functions in Apple's OSA environment.\nAt the core, the function {@link osaLib.osaJS osaJS} is a port from [brandonhorst's node-osa](https://github.com/brandonhorst/node-osa) module,\nin ES6 using Typescript and promises.\n\n`osaJs` is internally called by a number of OSX convenience functions exported as\n{@link Commands.osaCommands osaCommands}.\nCurrently available functions are:\n- &nbsp; {@link Commands.osaCommands.facetime      facetime}      starts a facetime call with a buddy\n- &nbsp; {@link Commands.osaCommands.getEmail      getEmail}      gets recent emails from `Mail`\n- &nbsp; {@link Commands.osaCommands.sendEmail     sendEmail}     sends an email using `Mail`\n- &nbsp; {@link Commands.osaCommands.launch        launch}        launches an application (such as `Mail`)\n- &nbsp; {@link Commands.osaCommands.isRunning     isRunning}     checks if an application is running\n- &nbsp; {@link Commands.osaCommands.quit          quit}          quits a running application\n- &nbsp; {@link Commands.osaCommands.launchScript  launchScript}  launches another OSA script\n- &nbsp; {@link Commands.osaCommands.restart       restart}       restarts the Mac\n- &nbsp; {@link Commands.osaCommands.sendMessage   sendMessage}   sends a text message to a buddy via `Messages`\n- &nbsp; {@link Commands.osaCommands.setVolume     setVolume}     sets the speaker volume\n- &nbsp; {@link Commands.osaCommands.say           say}           speaks a text string using the built-in voice synthesis\n- &nbsp; {@link Commands.osaCommands.setBrightness setBrightness} sets the screen brightness\n\n"
 			},
 			"sources": [
 				{
@@ -2157,11 +2256,11 @@
 			"title": "External modules",
 			"kind": 1,
 			"children": [
-				66,
-				115,
+				119,
+				12,
+				68,
 				1,
-				55,
-				116
+				120
 			]
 		}
 	]
