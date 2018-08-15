@@ -1007,10 +1007,10 @@
 						}
 					],
 					"type": {
-						"type": "reference",
-						"name": "Log"
+						"type": "intrinsic",
+						"name": "any"
 					},
-					"defaultValue": " new Log('osaCommands')"
+					"defaultValue": " Log('osaCommands')"
 				},
 				{
 					"id": 73,
@@ -2081,10 +2081,10 @@
 						}
 					],
 					"type": {
-						"type": "reference",
-						"name": "Log"
+						"type": "intrinsic",
+						"name": "any"
 					},
-					"defaultValue": " new Log('osalib')"
+					"defaultValue": " Log('osalib')"
 				},
 				{
 					"id": 5,

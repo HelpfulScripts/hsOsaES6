@@ -1,6 +1,6 @@
 
 import { cp } from 'hsnode'; 
-import { Log } from 'hsnode';  const log = new Log('osalib');
+import { Log } from 'hsnode';  const log = Log('osalib');
 
 // export function osa
 // takes a function, any number of arguments, and a callback.
