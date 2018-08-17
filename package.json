@@ -14,10 +14,15 @@
     "mac"
   ],
   "description": "Helpful Scripts OSA automation via Javascript",
-  "homepage": "https://helpfulscripts.github.io/hsOsaES6/indexGH.html#!/api/hsOsaES6/0",
+  "license": "MIT",
+  "homepage": "https://helpfulscripts.github.io/hsOsaES6/#!/api/hsOsaes6/0",
   "author": {
     "name": "masterscripter",
     "email": "helpfulscripts@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HelpfulScripts/hsOsaES6.git"
   },
   "scripts": {
     "build": "grunt travis",
