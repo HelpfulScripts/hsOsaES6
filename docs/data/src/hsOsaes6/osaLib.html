@@ -1,0 +1,86 @@
+
+                <html><style>body { overflow:hidden;}
+            h1 { font-family: Arial, sans-serif; font-size: 24px; color: #44a; }
+            p { margin:0; padding-top:5px; }
+            br  { margin:0; padding:0; }
+            .line { margin: 0 5px 0 0; padding-right: 5px; color:#999; background-color:#eef;  }
+            comment { color: #080;} module { color: #804;}
+            .listing { margin: 10px; border: 1px solid #ccc; 
+                    font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+                    font-size: 14px; line-height: 1.2em; 
+                    overflow:scroll;
+                    height:90%;
+            }
+            code { padding: 5px 0;}</style></html><body>
+                <h1>src/osaLib.ts</h1>
+                <div class='listing'><code><span id=1 class="line">&nbsp;&nbsp;&nbsp;1</span><br>
+<span id=2 class="line">&nbsp;&nbsp;&nbsp;2</span>import&nbsp;{&nbsp;cp&nbsp;}&nbsp;from&nbsp;'hsnode';&nbsp;<br>
+<span id=3 class="line">&nbsp;&nbsp;&nbsp;3</span>import&nbsp;{&nbsp;Log&nbsp;}&nbsp;from&nbsp;'hsnode';&nbsp;&nbsp;const&nbsp;log&nbsp;=&nbsp;Log('osalib');<br>
+<span id=4 class="line">&nbsp;&nbsp;&nbsp;4</span><br>
+<span id=5 class="line">&nbsp;&nbsp;&nbsp;5</span>//&nbsp;export&nbsp;function&nbsp;osa<br>
+<span id=6 class="line">&nbsp;&nbsp;&nbsp;6</span>//&nbsp;takes&nbsp;a&nbsp;function,&nbsp;any&nbsp;number&nbsp;of&nbsp;arguments,&nbsp;and&nbsp;a&nbsp;callback.<br>
+<span id=7 class="line">&nbsp;&nbsp;&nbsp;7</span>//&nbsp;It&nbsp;will&nbsp;run&nbsp;the&nbsp;function&nbsp;in&nbsp;the&nbsp;OSA&nbsp;environment,&nbsp;passing&nbsp;in&nbsp;any&nbsp;given&nbsp;arguements.<br>
+<span id=8 class="line">&nbsp;&nbsp;&nbsp;8</span>//&nbsp;that&nbsp;function&nbsp;is&nbsp;expected&nbsp;to&nbsp;return&nbsp;a&nbsp;single&nbsp;value,&nbsp;which&nbsp;will&nbsp;be&nbsp;passed&nbsp;back&nbsp;to&nbsp;the<br>
+<span id=9 class="line">&nbsp;&nbsp;&nbsp;9</span>//&nbsp;callback&nbsp;via&nbsp;stdout.<br>
+<span id=10 class="line">&nbsp;&nbsp;10</span>const&nbsp;consoleLogPrefix&nbsp;=&nbsp;'<node-osa>';<br>
+<span id=11 class="line">&nbsp;&nbsp;11</span>const&nbsp;consoleLogSuffix&nbsp;=&nbsp;'</node-osa>';<br>
+<span id=12 class="line">&nbsp;&nbsp;12</span><br>
+<span id=13 class="line">&nbsp;&nbsp;13</span>export&nbsp;function&nbsp;extractLogs&nbsp;(stderr:string)&nbsp;{<br>
+<span id=14 class="line">&nbsp;&nbsp;14</span>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;reg&nbsp;=&nbsp;new&nbsp;RegExp(consoleLogPrefix&nbsp;+&nbsp;'&nbsp;([\\s\\S]*?)&nbsp;'&nbsp;+&nbsp;consoleLogSuffix,&nbsp;'gm');<br>
+<span id=15 class="line">&nbsp;&nbsp;15</span>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;matches&nbsp;=&nbsp;stderr.match(reg);&nbsp;//&nbsp;all&nbsp;matches,&nbsp;preceeded&nbsp;by&nbsp;the&nbsp;entire&nbsp;string&nbsp;at&nbsp;matches[0]<br>
+<span id=16 class="line">&nbsp;&nbsp;16</span>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;matches?&nbsp;matches.slice(1).join('\n')&nbsp;:&nbsp;null;<br>
+<span id=17 class="line">&nbsp;&nbsp;17</span>}<br>
+<span id=18 class="line">&nbsp;&nbsp;18</span><br>
+<span id=19 class="line">&nbsp;&nbsp;19</span><comment>/**&nbsp;<br>
+<span id=20 class="line">&nbsp;&nbsp;20</span>&nbsp;*&nbsp;@description&nbsp;returns&nbsp;a&nbsp;promise&nbsp;to&nbsp;execute&nbsp;osaString.<br>
+<span id=21 class="line">&nbsp;&nbsp;21</span>&nbsp;*&nbsp;@return&nbsp;a&nbsp;promise&nbsp;with&nbsp;resolve(stdout,&nbsp;errors)&nbsp;and&nbsp;reject(error,&nbsp;errorLine)<br>
+<span id=22 class="line">&nbsp;&nbsp;22</span>&nbsp;*/</comment><br>
+<span id=23 class="line">&nbsp;&nbsp;23</span>export&nbsp;function&nbsp;osaJS&nbsp;(osaFunction:any,&nbsp;...args:&nbsp;any[]):Promise<any>&nbsp;{<br>
+<span id=24 class="line">&nbsp;&nbsp;24</span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;get&nbsp;an&nbsp;array&nbsp;of&nbsp;arguments,&nbsp;excluding&nbsp;the&nbsp;osaFunction<br>
+<span id=25 class="line">&nbsp;&nbsp;25</span>//&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;args&nbsp;=&nbsp;Array.prototype.slice.call(arguments,&nbsp;1,&nbsp;arguments.length);<br>
+<span id=26 class="line">&nbsp;&nbsp;26</span><br>
+<span id=27 class="line">&nbsp;&nbsp;27</span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;conver&nbsp;these&nbsp;args&nbsp;to&nbsp;json<br>
+<span id=28 class="line">&nbsp;&nbsp;28</span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;to&nbsp;do:&nbsp;replace&nbsp;':'&nbsp;in&nbsp;a<br>
+<span id=29 class="line">&nbsp;&nbsp;29</span>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;jsonArgs&nbsp;=&nbsp;args.map(a&nbsp;=>&nbsp;`${JSON.stringify(a)}`).join(',');<br>
+<span id=30 class="line">&nbsp;&nbsp;30</span>&nbsp;&nbsp;&nbsp;&nbsp;log.debug(`arguments&nbsp;to&nbsp;call:&nbsp;${jsonArgs}`);<br>
+<span id=31 class="line">&nbsp;&nbsp;31</span>&nbsp;&nbsp;<br>
+<span id=32 class="line">&nbsp;&nbsp;32</span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;augment&nbsp;console.log&nbsp;to&nbsp;encapsulate&nbsp;logs&nbsp;with&nbsp;<node-osa>...</node-osa>&nbsp;tags<br>
+<span id=33 class="line">&nbsp;&nbsp;33</span>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;consoleLogPatch&nbsp;=&nbsp;`<br>
+<span id=34 class="line">&nbsp;&nbsp;34</span>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;old&nbsp;=&nbsp;console.log;&nbsp;<br>
+<span id=35 class="line">&nbsp;&nbsp;35</span>&nbsp;&nbsp;&nbsp;&nbsp;console.log&nbsp;=&nbsp;function&nbsp;()&nbsp;{<br>
+<span id=36 class="line">&nbsp;&nbsp;36</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Array.prototype.unshift.call(arguments,&nbsp;"${consoleLogPrefix}");&nbsp;<br>
+<span id=37 class="line">&nbsp;&nbsp;37</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Array.prototype.push.call(arguments,&nbsp;"${consoleLogSuffix}");&nbsp;<br>
+<span id=38 class="line">&nbsp;&nbsp;38</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;old.apply(console,&nbsp;arguments);&nbsp;<br>
+<span id=39 class="line">&nbsp;&nbsp;39</span>&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;<br>
+<span id=40 class="line">&nbsp;&nbsp;40</span>&nbsp;&nbsp;&nbsp;&nbsp;`.replace(/\n/g,'');&nbsp;//&nbsp;remove&nbsp;the&nbsp;line&nbsp;feeds&nbsp;added&nbsp;above&nbsp;for&nbsp;readability<br>
+<span id=41 class="line">&nbsp;&nbsp;41</span><br>
+<span id=42 class="line">&nbsp;&nbsp;42</span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;build&nbsp;a&nbsp;string&nbsp;to&nbsp;call&nbsp;osaFunction,&nbsp;pass&nbsp;in&nbsp;args,&nbsp;and&nbsp;evaulate&nbsp;to<br>
+<span id=43 class="line">&nbsp;&nbsp;43</span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;the&nbsp;JSON&nbsp;representation&nbsp;of&nbsp;the&nbsp;return&nbsp;value,&nbsp;then&nbsp;call&nbsp;it&nbsp;with&nbsp;osascript<br>
+<span id=44 class="line">&nbsp;&nbsp;44</span>&nbsp;&nbsp;&nbsp;&nbsp;log.debug(osaFunction.toString());<br>
+<span id=45 class="line">&nbsp;&nbsp;45</span>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;functionCallString&nbsp;=&nbsp;consoleLogPatch&nbsp;+&nbsp;'JSON.stringify(('&nbsp;+&nbsp;osaFunction.toString()&nbsp;+&nbsp;')('&nbsp;+&nbsp;jsonArgs&nbsp;+&nbsp;'));';<br>
+<span id=46 class="line">&nbsp;&nbsp;46</span>&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;escapedCall&nbsp;=&nbsp;functionCallString<br>
+<span id=47 class="line">&nbsp;&nbsp;47</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.replace(/&nbsp;+/g,&nbsp;'&nbsp;')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;replace&nbsp;multiple&nbsp;whitespaces&nbsp;by&nbsp;single&nbsp;whitespaces<br>
+<span id=48 class="line">&nbsp;&nbsp;48</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.replace(/'/g,&nbsp;"'\''")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;replace&nbsp;'&nbsp;by&nbsp;'\''<br>
+<span id=49 class="line">&nbsp;&nbsp;49</span>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.replace(/@/g,&nbsp;"\\@")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;replace&nbsp;@&nbsp;by&nbsp;\@<br>
+<span id=50 class="line">&nbsp;&nbsp;50</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.split('\n')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;create&nbsp;multiple&nbsp;lines<br>
+<span id=51 class="line">&nbsp;&nbsp;51</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.map(l&nbsp;=>&nbsp;l.trim());<br>
+<span id=52 class="line">&nbsp;&nbsp;52</span>&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;executeString&nbsp;=&nbsp;"osascript&nbsp;-l&nbsp;JavaScript&nbsp;"&nbsp;+&nbsp;escapedCall.map(l&nbsp;=>&nbsp;"&nbsp;-e&nbsp;'"&nbsp;+&nbsp;l&nbsp;+&nbsp;"'").join('');<br>
+<span id=53 class="line">&nbsp;&nbsp;53</span><br>
+<span id=54 class="line">&nbsp;&nbsp;54</span>&nbsp;&nbsp;&nbsp;&nbsp;log.debug(executeString);<br>
+<span id=55 class="line">&nbsp;&nbsp;55</span>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;execute&nbsp;osascript&nbsp;as&nbsp;promise<br>
+<span id=56 class="line">&nbsp;&nbsp;56</span>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cp.exec(executeString)<br>
+<span id=57 class="line">&nbsp;&nbsp;57</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then((result:{stdout:string,&nbsp;stderr:string})&nbsp;=>&nbsp;{<br>
+<span id=58 class="line">&nbsp;&nbsp;58</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;logResult&nbsp;=&nbsp;extractLogs(result.stderr);<br>
+<span id=59 class="line">&nbsp;&nbsp;59</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;{stdout:result.stdout,&nbsp;logResult:logResult};<br>
+<span id=60 class="line">&nbsp;&nbsp;60</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<br>
+<span id=61 class="line">&nbsp;&nbsp;61</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.catch((err:any)&nbsp;=>&nbsp;{<br>
+<span id=62 class="line">&nbsp;&nbsp;62</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;match&nbsp;=&nbsp;err.toString().match(/(Error&nbsp;on&nbsp;line&nbsp;(\d+)):&nbsp;([\s\S]*)/i);<br>
+<span id=63 class="line">&nbsp;&nbsp;63</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;errLine&nbsp;=&nbsp;!match?&nbsp;'*?*'&nbsp;:&nbsp;`${match[3].trim()}&nbsp;on&nbsp;line&nbsp;${match[2]}:&nbsp;'${escapedCall[parseInt(match[2])-1]}'`;&nbsp;<br>
+<span id=64 class="line">&nbsp;&nbsp;64</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;{err,&nbsp;errLine};<br>
+<span id=65 class="line">&nbsp;&nbsp;65</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+<span id=66 class="line">&nbsp;&nbsp;66</span>}<br>
+<span id=67 class="line">&nbsp;&nbsp;67</span><br>
+<span id=68 class="line">&nbsp;&nbsp;68</span><br>
+<span id=69 class="line">&nbsp;&nbsp;69</span><br></code></div>
+                </body>
+            

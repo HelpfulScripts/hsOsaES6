@@ -5,7 +5,7 @@
  */
 
 import { cp }           from 'hsnode';
-import { Log }          from 'hsnode';    const log = Log('osaCommands');
+import { Log }          from 'hsnode';  const log = Log('osaCommands');
 import { OSXcommands}   from './osaCalls';
 import { osaJS }        from './osaLib';
 
