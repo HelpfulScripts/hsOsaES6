@@ -40,6 +40,7 @@
     "grunt-tslint": "^4.0.1",
     "grunt-typedoc": "^0.2.4",
     "grunt-webpack": "^3.1.2",
+    "hsnode": "^2.2.7",
     "coveralls": "^3.0.2",
     "grunt-coveralls": "^2.0.0",
     "jest": "^23.4.2",
