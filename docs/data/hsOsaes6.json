@@ -5,7 +5,7 @@
 	"flags": {},
 	"children": [
 		{
-			"id": 119,
+			"id": 120,
 			"name": "\"index\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -163,6 +163,29 @@
 					}
 				},
 				{
+					"id": 26,
+					"name": "ApplicationProcess",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "declares the Application object available within OSA"
+					},
+					"sources": [
+						{
+							"fileName": "osaCalls.ts",
+							"line": 25,
+							"character": 32
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				},
+				{
 					"id": 19,
 					"name": "Path",
 					"kind": 64,
@@ -249,7 +272,7 @@
 					]
 				},
 				{
-					"id": 26,
+					"id": 27,
 					"name": "OSXcommands",
 					"kind": 2097152,
 					"kindString": "Object literal",
@@ -262,7 +285,7 @@
 					},
 					"children": [
 						{
-							"id": 58,
+							"id": 59,
 							"name": "osaBrightness",
 							"kind": 64,
 							"kindString": "Function",
@@ -274,7 +297,7 @@
 							},
 							"signatures": [
 								{
-									"id": 59,
+									"id": 60,
 									"name": "osaBrightness",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -284,7 +307,7 @@
 									},
 									"parameters": [
 										{
-											"id": 60,
+											"id": 61,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -304,13 +327,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 146,
+									"line": 151,
 									"character": 17
 								}
 							]
 						},
 						{
-							"id": 56,
+							"id": 57,
 							"name": "osaCallFacetime",
 							"kind": 64,
 							"kindString": "Function",
@@ -322,7 +345,7 @@
 							},
 							"signatures": [
 								{
-									"id": 57,
+									"id": 58,
 									"name": "osaCallFacetime",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -339,13 +362,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 135,
+									"line": 140,
 									"character": 19
 								}
 							]
 						},
 						{
-							"id": 41,
+							"id": 42,
 							"name": "osaGetEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -357,7 +380,7 @@
 							},
 							"signatures": [
 								{
-									"id": 42,
+									"id": 43,
 									"name": "osaGetEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -367,7 +390,7 @@
 									},
 									"parameters": [
 										{
-											"id": 43,
+											"id": 44,
 											"name": "date",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -390,13 +413,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 73,
+									"line": 76,
 									"character": 15
 								}
 							]
 						},
 						{
-							"id": 27,
+							"id": 28,
 							"name": "osaGetMessage",
 							"kind": 64,
 							"kindString": "Function",
@@ -405,14 +428,14 @@
 							},
 							"signatures": [
 								{
-									"id": 28,
+									"id": 29,
 									"name": "osaGetMessage",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 29,
+											"id": 30,
 											"name": "updatedSince",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -432,13 +455,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 30,
+									"line": 33,
 									"character": 17
 								}
 							]
 						},
 						{
-							"id": 47,
+							"id": 48,
 							"name": "osaLaunch",
 							"kind": 64,
 							"kindString": "Function",
@@ -450,7 +473,7 @@
 							},
 							"signatures": [
 								{
-									"id": 48,
+									"id": 49,
 									"name": "osaLaunch",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -460,7 +483,7 @@
 									},
 									"parameters": [
 										{
-											"id": 49,
+											"id": 50,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -480,13 +503,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 109,
+									"line": 114,
 									"character": 13
 								}
 							]
 						},
 						{
-							"id": 50,
+							"id": 51,
 							"name": "osaLaunchScript",
 							"kind": 64,
 							"kindString": "Function",
@@ -498,7 +521,7 @@
 							},
 							"signatures": [
 								{
-									"id": 51,
+									"id": 52,
 									"name": "osaLaunchScript",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -508,7 +531,7 @@
 									},
 									"parameters": [
 										{
-											"id": 52,
+											"id": 53,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -528,13 +551,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 118,
+									"line": 123,
 									"character": 19
 								}
 							]
 						},
 						{
-							"id": 53,
+							"id": 54,
 							"name": "osaQuit",
 							"kind": 64,
 							"kindString": "Function",
@@ -546,7 +569,7 @@
 							},
 							"signatures": [
 								{
-									"id": 54,
+									"id": 55,
 									"name": "osaQuit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -556,7 +579,7 @@
 									},
 									"parameters": [
 										{
-											"id": 55,
+											"id": 56,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -576,13 +599,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 127,
+									"line": 132,
 									"character": 11
 								}
 							]
 						},
 						{
-							"id": 66,
+							"id": 67,
 							"name": "osaRestart",
 							"kind": 64,
 							"kindString": "Function",
@@ -594,7 +617,7 @@
 							},
 							"signatures": [
 								{
-									"id": 67,
+									"id": 68,
 									"name": "osaRestart",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -611,13 +634,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 186,
+									"line": 191,
 									"character": 14
 								}
 							]
 						},
 						{
-							"id": 44,
+							"id": 45,
 							"name": "osaSay",
 							"kind": 64,
 							"kindString": "Function",
@@ -629,7 +652,7 @@
 							},
 							"signatures": [
 								{
-									"id": 45,
+									"id": 46,
 									"name": "osaSay",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -639,7 +662,7 @@
 									},
 									"parameters": [
 										{
-											"id": 46,
+											"id": 47,
 											"name": "text",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -659,13 +682,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 98,
+									"line": 103,
 									"character": 10
 								}
 							]
 						},
 						{
-							"id": 35,
+							"id": 36,
 							"name": "osaSendEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -677,7 +700,7 @@
 							},
 							"signatures": [
 								{
-									"id": 36,
+									"id": 37,
 									"name": "osaSendEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -687,7 +710,7 @@
 									},
 									"parameters": [
 										{
-											"id": 37,
+											"id": 38,
 											"name": "subject",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -698,7 +721,7 @@
 											}
 										},
 										{
-											"id": 38,
+											"id": 39,
 											"name": "address",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -709,7 +732,7 @@
 											}
 										},
 										{
-											"id": 39,
+											"id": 40,
 											"name": "content",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -720,7 +743,7 @@
 											}
 										},
 										{
-											"id": 40,
+											"id": 41,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -743,13 +766,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 50,
+									"line": 53,
 									"character": 16
 								}
 							]
 						},
 						{
-							"id": 30,
+							"id": 31,
 							"name": "osaSendMessage",
 							"kind": 64,
 							"kindString": "Function",
@@ -761,7 +784,7 @@
 							},
 							"signatures": [
 								{
-									"id": 31,
+									"id": 32,
 									"name": "osaSendMessage",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -771,7 +794,7 @@
 									},
 									"parameters": [
 										{
-											"id": 32,
+											"id": 33,
 											"name": "appleIDs",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -785,7 +808,7 @@
 											}
 										},
 										{
-											"id": 33,
+											"id": 34,
 											"name": "message",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -796,7 +819,7 @@
 											}
 										},
 										{
-											"id": 34,
+											"id": 35,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -819,13 +842,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 37,
+									"line": 40,
 									"character": 18
 								}
 							]
 						},
 						{
-							"id": 61,
+							"id": 62,
 							"name": "osaVolume",
 							"kind": 64,
 							"kindString": "Function",
@@ -837,7 +860,7 @@
 							},
 							"signatures": [
 								{
-									"id": 62,
+									"id": 63,
 									"name": "osaVolume",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -847,7 +870,7 @@
 									},
 									"parameters": [
 										{
-											"id": 63,
+											"id": 64,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -867,13 +890,13 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 168,
+									"line": 173,
 									"character": 13
 								}
 							]
 						},
 						{
-							"id": 64,
+							"id": 65,
 							"name": "osaVolumeSettings",
 							"kind": 64,
 							"kindString": "Function",
@@ -885,7 +908,7 @@
 							},
 							"signatures": [
 								{
-									"id": 65,
+									"id": 66,
 									"name": "osaVolumeSettings",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -902,7 +925,7 @@
 							"sources": [
 								{
 									"fileName": "osaCalls.ts",
-									"line": 177,
+									"line": 182,
 									"character": 21
 								}
 							]
@@ -913,26 +936,26 @@
 							"title": "Functions",
 							"kind": 64,
 							"children": [
-								58,
-								56,
-								41,
-								27,
-								47,
-								50,
-								53,
-								66,
-								44,
-								35,
-								30,
-								61,
-								64
+								59,
+								57,
+								42,
+								28,
+								48,
+								51,
+								54,
+								67,
+								45,
+								36,
+								31,
+								62,
+								65
 							]
 						}
 					],
 					"sources": [
 						{
 							"fileName": "osaCalls.ts",
-							"line": 29,
+							"line": 32,
 							"character": 24
 						}
 					],
@@ -954,7 +977,8 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						25
+						25,
+						26
 					]
 				},
 				{
@@ -969,7 +993,7 @@
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						26
+						27
 					]
 				}
 			],
@@ -982,7 +1006,7 @@
 			]
 		},
 		{
-			"id": 68,
+			"id": 69,
 			"name": "\"osaCommands\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -992,7 +1016,7 @@
 			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/osaCommands.ts",
 			"children": [
 				{
-					"id": 69,
+					"id": 70,
 					"name": "log",
 					"kind": 32,
 					"kindString": "Variable",
@@ -1013,7 +1037,7 @@
 					"defaultValue": " newLog('osaCommands')"
 				},
 				{
-					"id": 73,
+					"id": 74,
 					"name": "errorHandler",
 					"kind": 64,
 					"kindString": "Function",
@@ -1025,7 +1049,7 @@
 					},
 					"signatures": [
 						{
-							"id": 74,
+							"id": 75,
 							"name": "errorHandler",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1035,7 +1059,7 @@
 							},
 							"parameters": [
 								{
-									"id": 75,
+									"id": 76,
 									"name": "cmd",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1064,7 +1088,7 @@
 					]
 				},
 				{
-					"id": 70,
+					"id": 71,
 					"name": "responseHandler",
 					"kind": 64,
 					"kindString": "Function",
@@ -1076,7 +1100,7 @@
 					},
 					"signatures": [
 						{
-							"id": 71,
+							"id": 72,
 							"name": "responseHandler",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1086,7 +1110,7 @@
 							},
 							"parameters": [
 								{
-									"id": 72,
+									"id": 73,
 									"name": "cmd",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1112,7 +1136,7 @@
 					]
 				},
 				{
-					"id": 76,
+					"id": 77,
 					"name": "osaCommands",
 					"kind": 2097152,
 					"kindString": "Object literal",
@@ -1125,7 +1149,7 @@
 					},
 					"children": [
 						{
-							"id": 91,
+							"id": 92,
 							"name": "facetime",
 							"kind": 64,
 							"kindString": "Function",
@@ -1138,7 +1162,7 @@
 							},
 							"signatures": [
 								{
-									"id": 92,
+									"id": 93,
 									"name": "facetime",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1149,7 +1173,7 @@
 									},
 									"parameters": [
 										{
-											"id": 93,
+											"id": 94,
 											"name": "appleID",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1184,7 +1208,7 @@
 							]
 						},
 						{
-							"id": 88,
+							"id": 89,
 							"name": "getEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -1203,7 +1227,7 @@
 							},
 							"signatures": [
 								{
-									"id": 89,
+									"id": 90,
 									"name": "getEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1214,7 +1238,7 @@
 									},
 									"parameters": [
 										{
-											"id": 90,
+											"id": 91,
 											"name": "date",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1246,7 +1270,7 @@
 							]
 						},
 						{
-							"id": 115,
+							"id": 116,
 							"name": "getVolume",
 							"kind": 64,
 							"kindString": "Function",
@@ -1259,7 +1283,7 @@
 							},
 							"signatures": [
 								{
-									"id": 116,
+									"id": 117,
 									"name": "getVolume",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1289,7 +1313,7 @@
 							]
 						},
 						{
-							"id": 106,
+							"id": 107,
 							"name": "isRunning",
 							"kind": 64,
 							"kindString": "Function",
@@ -1302,7 +1326,7 @@
 							},
 							"signatures": [
 								{
-									"id": 107,
+									"id": 108,
 									"name": "isRunning",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1313,7 +1337,7 @@
 									},
 									"parameters": [
 										{
-											"id": 108,
+											"id": 109,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1348,7 +1372,7 @@
 							]
 						},
 						{
-							"id": 97,
+							"id": 98,
 							"name": "launch",
 							"kind": 64,
 							"kindString": "Function",
@@ -1361,7 +1385,7 @@
 							},
 							"signatures": [
 								{
-									"id": 98,
+									"id": 99,
 									"name": "launch",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1372,7 +1396,7 @@
 									},
 									"parameters": [
 										{
-											"id": 99,
+											"id": 100,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1407,7 +1431,7 @@
 							]
 						},
 						{
-							"id": 100,
+							"id": 101,
 							"name": "launchScript",
 							"kind": 64,
 							"kindString": "Function",
@@ -1420,7 +1444,7 @@
 							},
 							"signatures": [
 								{
-									"id": 101,
+									"id": 102,
 									"name": "launchScript",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1431,7 +1455,7 @@
 									},
 									"parameters": [
 										{
-											"id": 102,
+											"id": 103,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1466,7 +1490,7 @@
 							]
 						},
 						{
-							"id": 103,
+							"id": 104,
 							"name": "quit",
 							"kind": 64,
 							"kindString": "Function",
@@ -1479,7 +1503,7 @@
 							},
 							"signatures": [
 								{
-									"id": 104,
+									"id": 105,
 									"name": "quit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1490,7 +1514,7 @@
 									},
 									"parameters": [
 										{
-											"id": 105,
+											"id": 106,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1525,7 +1549,7 @@
 							]
 						},
 						{
-							"id": 117,
+							"id": 118,
 							"name": "restart",
 							"kind": 64,
 							"kindString": "Function",
@@ -1538,7 +1562,7 @@
 							},
 							"signatures": [
 								{
-									"id": 118,
+									"id": 119,
 									"name": "restart",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1568,7 +1592,7 @@
 							]
 						},
 						{
-							"id": 94,
+							"id": 95,
 							"name": "say",
 							"kind": 64,
 							"kindString": "Function",
@@ -1581,7 +1605,7 @@
 							},
 							"signatures": [
 								{
-									"id": 95,
+									"id": 96,
 									"name": "say",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1592,7 +1616,7 @@
 									},
 									"parameters": [
 										{
-											"id": 96,
+											"id": 97,
 											"name": "text",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1627,7 +1651,7 @@
 							]
 						},
 						{
-							"id": 82,
+							"id": 83,
 							"name": "sendEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -1646,7 +1670,7 @@
 							},
 							"signatures": [
 								{
-									"id": 83,
+									"id": 84,
 									"name": "sendEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1657,7 +1681,7 @@
 									},
 									"parameters": [
 										{
-											"id": 84,
+											"id": 85,
 											"name": "subject",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1671,7 +1695,7 @@
 											}
 										},
 										{
-											"id": 85,
+											"id": 86,
 											"name": "to",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1685,7 +1709,7 @@
 											}
 										},
 										{
-											"id": 86,
+											"id": 87,
 											"name": "content",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1700,7 +1724,7 @@
 											"defaultValue": "\"\""
 										},
 										{
-											"id": 87,
+											"id": 88,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1737,7 +1761,7 @@
 							]
 						},
 						{
-							"id": 77,
+							"id": 78,
 							"name": "sendMessage",
 							"kind": 64,
 							"kindString": "Function",
@@ -1750,7 +1774,7 @@
 							},
 							"signatures": [
 								{
-									"id": 78,
+									"id": 79,
 									"name": "sendMessage",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1761,7 +1785,7 @@
 									},
 									"parameters": [
 										{
-											"id": 79,
+											"id": 80,
 											"name": "appleIDs",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1778,7 +1802,7 @@
 											}
 										},
 										{
-											"id": 80,
+											"id": 81,
 											"name": "message",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1792,7 +1816,7 @@
 											}
 										},
 										{
-											"id": 81,
+											"id": 82,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1829,7 +1853,7 @@
 							]
 						},
 						{
-							"id": 109,
+							"id": 110,
 							"name": "setBrightness",
 							"kind": 64,
 							"kindString": "Function",
@@ -1842,7 +1866,7 @@
 							},
 							"signatures": [
 								{
-									"id": 110,
+									"id": 111,
 									"name": "setBrightness",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1853,7 +1877,7 @@
 									},
 									"parameters": [
 										{
-											"id": 111,
+											"id": 112,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1888,7 +1912,7 @@
 							]
 						},
 						{
-							"id": 112,
+							"id": 113,
 							"name": "setVolume",
 							"kind": 64,
 							"kindString": "Function",
@@ -1901,7 +1925,7 @@
 							},
 							"signatures": [
 								{
-									"id": 113,
+									"id": 114,
 									"name": "setVolume",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1912,7 +1936,7 @@
 									},
 									"parameters": [
 										{
-											"id": 114,
+											"id": 115,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1952,19 +1976,19 @@
 							"title": "Functions",
 							"kind": 64,
 							"children": [
-								91,
-								88,
-								115,
-								106,
-								97,
-								100,
-								103,
-								117,
-								94,
-								82,
-								77,
-								109,
-								112
+								92,
+								89,
+								116,
+								107,
+								98,
+								101,
+								104,
+								118,
+								95,
+								83,
+								78,
+								110,
+								113
 							]
 						}
 					],
@@ -1986,22 +2010,22 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						69
+						70
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						73,
-						70
+						74,
+						71
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						76
+						77
 					]
 				}
 			],
@@ -2230,7 +2254,7 @@
 			]
 		},
 		{
-			"id": 120,
+			"id": 121,
 			"name": "\"overview\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -2256,11 +2280,11 @@
 			"title": "External modules",
 			"kind": 1,
 			"children": [
-				119,
+				120,
 				12,
-				68,
+				69,
 				1,
-				120
+				121
 			]
 		}
 	]
