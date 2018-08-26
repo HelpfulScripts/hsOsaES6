@@ -5,7 +5,7 @@
  */
 
 import { cp }           from 'hsnode';
-import { Log }          from 'hsnode';  const log = Log('osaCommands');
+import { newLog }          from 'hsnode';  const log = newLog('osaCommands');
 import { OSXcommands}   from './osaCalls';
 import { osaJS }        from './osaLib';
 
@@ -191,6 +191,7 @@ export const osaCommands = {
         log.debug('setting brightness to ' + value);
         return osaJS(OSXcommands.osaBrightness, value)
             .then(responseHandler('osaBrightness'))
+            .then(() => osaCommands.quit("System Preferences"))
             .catch(errorHandler('osaBrightness ' + value));
     },
 

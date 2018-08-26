@@ -1003,14 +1003,14 @@
 						{
 							"fileName": "osaCommands.ts",
 							"line": 8,
-							"character": 49
+							"character": 52
 						}
 					],
 					"type": {
-						"type": "intrinsic",
-						"name": "any"
+						"type": "reference",
+						"name": "LogType"
 					},
-					"defaultValue": " Log('osaCommands')"
+					"defaultValue": " newLog('osaCommands')"
 				},
 				{
 					"id": 73,
@@ -1283,7 +1283,7 @@
 							"sources": [
 								{
 									"fileName": "osaCommands.ts",
-									"line": 214,
+									"line": 215,
 									"character": 13
 								}
 							]
@@ -1562,7 +1562,7 @@
 							"sources": [
 								{
 									"fileName": "osaCommands.ts",
-									"line": 225,
+									"line": 226,
 									"character": 11
 								}
 							]
@@ -1941,7 +1941,7 @@
 							"sources": [
 								{
 									"fileName": "osaCommands.ts",
-									"line": 202,
+									"line": 203,
 									"character": 13
 								}
 							]
@@ -2077,14 +2077,14 @@
 						{
 							"fileName": "osaLib.ts",
 							"line": 3,
-							"character": 40
+							"character": 43
 						}
 					],
 					"type": {
-						"type": "intrinsic",
-						"name": "any"
+						"type": "reference",
+						"name": "LogType"
 					},
-					"defaultValue": " Log('osalib')"
+					"defaultValue": " newLog('osalib')"
 				},
 				{
 					"id": 5,

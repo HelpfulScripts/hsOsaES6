@@ -1,9 +1,11 @@
 import { osaCommands } from './osaCommands';
-import { Log } from 'hsnode'; const log = Log('osaCommandsJests');
+import { newLog } from 'hsnode';
+
+const log = newLog('osaCommandsJests');
 
 describe('OSA Commands', ()=>{
     describe('setVolume', ()=>{
-        test('setVolume to 1', () => 
+        it('should setVolume to 1', () => 
             osaCommands.setVolume(1)
             .then((res) => {
                 log.debug(`setVolume: ${res}`);
@@ -12,7 +14,7 @@ describe('OSA Commands', ()=>{
         );
     });
     describe('getVolume', ()=>{
-        test('getVolume', () =>
+        it('should getVolume', () =>
             osaCommands.getVolume()
             .then((res) => {
                 log.debug(`getVolume: ${res}`);
@@ -25,7 +27,7 @@ describe('OSA Commands', ()=>{
     describe('setBrightness', ()=>{
         // beforeAll(() => log.level(log.DEBUG));
         // afterAll(() => log.level(log.INFO));
-        test('setBrightness', () =>
+        it('should setBrightness', () =>
             osaCommands.setBrightness(0.9)
             .then((res) => {
                 log.debug(`setBrightness: ${typeof res} ${res}`);
@@ -38,7 +40,7 @@ describe('OSA Commands', ()=>{
         );
     });
     describe('launch', ()=>{
-        test('launch', () =>
+        it('should launch', () =>
             osaCommands.launch('Mail')
             .then((res) => {
                 log.debug(`launch: ${res}`);
@@ -47,7 +49,7 @@ describe('OSA Commands', ()=>{
         );
     });
     describe('isRunning', ()=>{
-        test('isRunning', () =>
+        it('should check if isRunning', () =>
             osaCommands.launch('Mail')
             .then(()=> osaCommands.isRunning('Mail'))
             .then((res) => {
@@ -57,7 +59,7 @@ describe('OSA Commands', ()=>{
         );
     });
     describe('quit', ()=>{
-        test('quit', () =>
+        it('should quit', () =>
             osaCommands.quit('Mail')
             .then((res) => {
                 log.debug(`quit: ${res}`);
@@ -74,6 +76,9 @@ describe('OSA Commands', ()=>{
     describe('facetime', ()=>{
     });
     describe('say', ()=>{
+        it('should say', ()=> 
+            expect(osaCommands.say('testing testing')).resolves.toBe("I said 'testing testing'")
+        );
     });
     describe('launchScript', ()=>{
     });

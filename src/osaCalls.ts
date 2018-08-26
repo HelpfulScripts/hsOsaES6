@@ -21,6 +21,9 @@ declare interface ApplicationIF {
 /** declares the Application object available within OSA */
 declare const Application:ApplicationIF;
 
+/** declares the Application object available within OSA */
+declare const ApplicationProcess:any;
+
 
 /**
  * Collection of client-side (OSA-side) OSX scripts to be executed in the context of Apple's
@@ -90,6 +93,8 @@ export const OSXcommands = {
                 msgSinceDate: newMsgs.map((m:any) => { return {from: m.sender(), subject: m.subject(), received: m.dateReceived(), id: m.id()};})
             });
         });
+        const Term = Application("Terminal");
+        Term.activate();
         return result;
     },
     /**
