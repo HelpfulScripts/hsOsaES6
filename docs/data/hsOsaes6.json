@@ -1027,14 +1027,14 @@
 						{
 							"fileName": "osaCommands.ts",
 							"line": 8,
-							"character": 52
+							"character": 49
 						}
 					],
 					"type": {
-						"type": "reference",
-						"name": "LogType"
+						"type": "intrinsic",
+						"name": "any"
 					},
-					"defaultValue": " newLog('osaCommands')"
+					"defaultValue": " gLog('osaCommands')"
 				},
 				{
 					"id": 74,
@@ -2101,14 +2101,14 @@
 						{
 							"fileName": "osaLib.ts",
 							"line": 3,
-							"character": 43
+							"character": 49
 						}
 					],
 					"type": {
-						"type": "reference",
-						"name": "LogType"
+						"type": "intrinsic",
+						"name": "any"
 					},
-					"defaultValue": " newLog('osalib')"
+					"defaultValue": " gLog('osalib')"
 				},
 				{
 					"id": 5,
