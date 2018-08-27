@@ -1,7 +1,5 @@
 import { osaCommands } from './osaCommands';
-import { newLog } from 'hsnode';
-
-const log = newLog('osaCommandsJests');
+import { log as gLog }  from 'hsnode';  const log = gLog('osaCommandsJests');
 
 describe('OSA Commands', ()=>{
     describe('setVolume', ()=>{
