@@ -5,7 +5,7 @@
 	"flags": {},
 	"children": [
 		{
-			"id": 120,
+			"id": 228,
 			"name": "\"index\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -22,7 +22,7 @@
 			]
 		},
 		{
-			"id": 12,
+			"id": 66,
 			"name": "\"osaCalls\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -36,7 +36,7 @@
 			},
 			"children": [
 				{
-					"id": 13,
+					"id": 67,
 					"name": "ApplicationIF",
 					"kind": 256,
 					"kindString": "Interface",
@@ -46,7 +46,7 @@
 					},
 					"signatures": [
 						{
-							"id": 14,
+							"id": 68,
 							"name": "__call",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -56,7 +56,7 @@
 							},
 							"parameters": [
 								{
-									"id": 15,
+									"id": 69,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -77,7 +77,7 @@
 					],
 					"children": [
 						{
-							"id": 16,
+							"id": 70,
 							"name": "currentApplication",
 							"kind": 1024,
 							"kindString": "Property",
@@ -92,14 +92,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 17,
+									"id": 71,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 18,
+											"id": 72,
 											"name": "__call",
 											"kind": 4096,
 											"kindString": "Call signature",
@@ -126,7 +126,7 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								16
+								70
 							]
 						}
 					],
@@ -139,7 +139,7 @@
 					]
 				},
 				{
-					"id": 25,
+					"id": 79,
 					"name": "Application",
 					"kind": 32,
 					"kindString": "Variable",
@@ -159,11 +159,11 @@
 					"type": {
 						"type": "reference",
 						"name": "ApplicationIF",
-						"id": 13
+						"id": 67
 					}
 				},
 				{
-					"id": 26,
+					"id": 80,
 					"name": "ApplicationProcess",
 					"kind": 32,
 					"kindString": "Variable",
@@ -186,14 +186,14 @@
 					}
 				},
 				{
-					"id": 19,
+					"id": 73,
 					"name": "Path",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 20,
+							"id": 74,
 							"name": "Path",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -203,7 +203,7 @@
 							},
 							"parameters": [
 								{
-									"id": 21,
+									"id": 75,
 									"name": "name",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -229,14 +229,14 @@
 					]
 				},
 				{
-					"id": 22,
+					"id": 76,
 					"name": "delay",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 23,
+							"id": 77,
 							"name": "delay",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -246,7 +246,7 @@
 							},
 							"parameters": [
 								{
-									"id": 24,
+									"id": 78,
 									"name": "ms",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -272,7 +272,7 @@
 					]
 				},
 				{
-					"id": 27,
+					"id": 81,
 					"name": "OSXcommands",
 					"kind": 2097152,
 					"kindString": "Object literal",
@@ -285,7 +285,7 @@
 					},
 					"children": [
 						{
-							"id": 59,
+							"id": 113,
 							"name": "osaBrightness",
 							"kind": 64,
 							"kindString": "Function",
@@ -297,7 +297,7 @@
 							},
 							"signatures": [
 								{
-									"id": 60,
+									"id": 114,
 									"name": "osaBrightness",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -307,7 +307,7 @@
 									},
 									"parameters": [
 										{
-											"id": 61,
+											"id": 115,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -333,7 +333,7 @@
 							]
 						},
 						{
-							"id": 57,
+							"id": 111,
 							"name": "osaCallFacetime",
 							"kind": 64,
 							"kindString": "Function",
@@ -345,7 +345,7 @@
 							},
 							"signatures": [
 								{
-									"id": 58,
+									"id": 112,
 									"name": "osaCallFacetime",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -368,7 +368,7 @@
 							]
 						},
 						{
-							"id": 42,
+							"id": 96,
 							"name": "osaGetEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -380,7 +380,7 @@
 							},
 							"signatures": [
 								{
-									"id": 43,
+									"id": 97,
 									"name": "osaGetEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -390,7 +390,7 @@
 									},
 									"parameters": [
 										{
-											"id": 44,
+											"id": 98,
 											"name": "date",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -419,7 +419,7 @@
 							]
 						},
 						{
-							"id": 28,
+							"id": 82,
 							"name": "osaGetMessage",
 							"kind": 64,
 							"kindString": "Function",
@@ -428,14 +428,14 @@
 							},
 							"signatures": [
 								{
-									"id": 29,
+									"id": 83,
 									"name": "osaGetMessage",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 30,
+											"id": 84,
 											"name": "updatedSince",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -461,7 +461,7 @@
 							]
 						},
 						{
-							"id": 48,
+							"id": 102,
 							"name": "osaLaunch",
 							"kind": 64,
 							"kindString": "Function",
@@ -473,7 +473,7 @@
 							},
 							"signatures": [
 								{
-									"id": 49,
+									"id": 103,
 									"name": "osaLaunch",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -483,7 +483,7 @@
 									},
 									"parameters": [
 										{
-											"id": 50,
+											"id": 104,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -509,7 +509,7 @@
 							]
 						},
 						{
-							"id": 51,
+							"id": 105,
 							"name": "osaLaunchScript",
 							"kind": 64,
 							"kindString": "Function",
@@ -521,7 +521,7 @@
 							},
 							"signatures": [
 								{
-									"id": 52,
+									"id": 106,
 									"name": "osaLaunchScript",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -531,7 +531,7 @@
 									},
 									"parameters": [
 										{
-											"id": 53,
+											"id": 107,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -557,7 +557,7 @@
 							]
 						},
 						{
-							"id": 54,
+							"id": 108,
 							"name": "osaQuit",
 							"kind": 64,
 							"kindString": "Function",
@@ -569,7 +569,7 @@
 							},
 							"signatures": [
 								{
-									"id": 55,
+									"id": 109,
 									"name": "osaQuit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -579,7 +579,7 @@
 									},
 									"parameters": [
 										{
-											"id": 56,
+											"id": 110,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -605,7 +605,7 @@
 							]
 						},
 						{
-							"id": 67,
+							"id": 121,
 							"name": "osaRestart",
 							"kind": 64,
 							"kindString": "Function",
@@ -617,7 +617,7 @@
 							},
 							"signatures": [
 								{
-									"id": 68,
+									"id": 122,
 									"name": "osaRestart",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -640,7 +640,7 @@
 							]
 						},
 						{
-							"id": 45,
+							"id": 99,
 							"name": "osaSay",
 							"kind": 64,
 							"kindString": "Function",
@@ -652,7 +652,7 @@
 							},
 							"signatures": [
 								{
-									"id": 46,
+									"id": 100,
 									"name": "osaSay",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -662,7 +662,7 @@
 									},
 									"parameters": [
 										{
-											"id": 47,
+											"id": 101,
 											"name": "text",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -688,7 +688,7 @@
 							]
 						},
 						{
-							"id": 36,
+							"id": 90,
 							"name": "osaSendEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -700,7 +700,7 @@
 							},
 							"signatures": [
 								{
-									"id": 37,
+									"id": 91,
 									"name": "osaSendEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -710,7 +710,7 @@
 									},
 									"parameters": [
 										{
-											"id": 38,
+											"id": 92,
 											"name": "subject",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -721,7 +721,7 @@
 											}
 										},
 										{
-											"id": 39,
+											"id": 93,
 											"name": "address",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -732,7 +732,7 @@
 											}
 										},
 										{
-											"id": 40,
+											"id": 94,
 											"name": "content",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -743,7 +743,7 @@
 											}
 										},
 										{
-											"id": 41,
+											"id": 95,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -772,7 +772,7 @@
 							]
 						},
 						{
-							"id": 31,
+							"id": 85,
 							"name": "osaSendMessage",
 							"kind": 64,
 							"kindString": "Function",
@@ -784,7 +784,7 @@
 							},
 							"signatures": [
 								{
-									"id": 32,
+									"id": 86,
 									"name": "osaSendMessage",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -794,7 +794,7 @@
 									},
 									"parameters": [
 										{
-											"id": 33,
+											"id": 87,
 											"name": "appleIDs",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -808,7 +808,7 @@
 											}
 										},
 										{
-											"id": 34,
+											"id": 88,
 											"name": "message",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -819,7 +819,7 @@
 											}
 										},
 										{
-											"id": 35,
+											"id": 89,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -848,7 +848,7 @@
 							]
 						},
 						{
-							"id": 62,
+							"id": 116,
 							"name": "osaVolume",
 							"kind": 64,
 							"kindString": "Function",
@@ -860,7 +860,7 @@
 							},
 							"signatures": [
 								{
-									"id": 63,
+									"id": 117,
 									"name": "osaVolume",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -870,7 +870,7 @@
 									},
 									"parameters": [
 										{
-											"id": 64,
+											"id": 118,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -896,7 +896,7 @@
 							]
 						},
 						{
-							"id": 65,
+							"id": 119,
 							"name": "osaVolumeSettings",
 							"kind": 64,
 							"kindString": "Function",
@@ -908,7 +908,7 @@
 							},
 							"signatures": [
 								{
-									"id": 66,
+									"id": 120,
 									"name": "osaVolumeSettings",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -936,19 +936,19 @@
 							"title": "Functions",
 							"kind": 64,
 							"children": [
-								59,
-								57,
-								42,
-								28,
-								48,
-								51,
-								54,
-								67,
-								45,
-								36,
-								31,
-								62,
-								65
+								113,
+								111,
+								96,
+								82,
+								102,
+								105,
+								108,
+								121,
+								99,
+								90,
+								85,
+								116,
+								119
 							]
 						}
 					],
@@ -970,30 +970,30 @@
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						13
+						67
 					]
 				},
 				{
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						25,
-						26
+						79,
+						80
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						19,
-						22
+						73,
+						76
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						27
+						81
 					]
 				}
 			],
@@ -1006,7 +1006,7 @@
 			]
 		},
 		{
-			"id": 69,
+			"id": 123,
 			"name": "\"osaCommands\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -1016,7 +1016,7 @@
 			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/osaCommands.ts",
 			"children": [
 				{
-					"id": 70,
+					"id": 124,
 					"name": "log",
 					"kind": 32,
 					"kindString": "Variable",
@@ -1031,13 +1031,846 @@
 						}
 					],
 					"type": {
-						"type": "intrinsic",
-						"name": "any"
+						"type": "reflection",
+						"declaration": {
+							"id": 125,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 126,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 127,
+											"name": "_prefix",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 128,
+											"name": "logToFile",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "ltfType"
+											}
+										},
+										{
+											"id": 129,
+											"name": "pathExists",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "peType"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "LogType"
+									}
+								}
+							],
+							"children": [
+								{
+									"id": 130,
+									"name": "DEBUG",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 3,
+											"character": 9
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								},
+								{
+									"id": 133,
+									"name": "ERROR",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 6,
+											"character": 9
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								},
+								{
+									"id": 131,
+									"name": "INFO",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 4,
+											"character": 8
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								},
+								{
+									"id": 132,
+									"name": "WARN",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 5,
+											"character": 8
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								},
+								{
+									"id": 168,
+									"name": "config",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 169,
+											"name": "config",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 170,
+													"name": "cfg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reflection",
+														"declaration": {
+															"id": 171,
+															"name": "__type",
+															"kind": 65536,
+															"kindString": "Type literal",
+															"flags": {},
+															"children": [
+																{
+																	"id": 172,
+																	"name": "colors",
+																	"kind": 32,
+																	"kindString": "Variable",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+																			"line": 17,
+																			"character": 14
+																		}
+																	],
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "boolean"
+																	}
+																},
+																{
+																	"id": 173,
+																	"name": "format",
+																	"kind": 32,
+																	"kindString": "Variable",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+																			"line": 18,
+																			"character": 14
+																		}
+																	],
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																},
+																{
+																	"id": 174,
+																	"name": "level",
+																	"kind": 32,
+																	"kindString": "Variable",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+																			"line": 19,
+																			"character": 13
+																		}
+																	],
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "symbol"
+																	}
+																}
+															],
+															"groups": [
+																{
+																	"title": "Variables",
+																	"kind": 32,
+																	"children": [
+																		172,
+																		173,
+																		174
+																	]
+																}
+															],
+															"sources": [
+																{
+																	"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+																	"line": 16,
+																	"character": 15
+																}
+															]
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "void"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 16,
+											"character": 10
+										}
+									]
+								},
+								{
+									"id": 138,
+									"name": "debug",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 139,
+											"name": "debug",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 140,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 141,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 8,
+											"character": 9
+										}
+									]
+								},
+								{
+									"id": 150,
+									"name": "error",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 151,
+											"name": "error",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 152,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 153,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 11,
+											"character": 9
+										}
+									]
+								},
+								{
+									"id": 175,
+									"name": "examine",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 176,
+											"name": "examine",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 177,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												},
+												{
+													"id": 178,
+													"name": "depth",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 21,
+											"character": 11
+										}
+									]
+								},
+								{
+									"id": 162,
+									"name": "format",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 163,
+											"name": "format",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 164,
+													"name": "fmtStr",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 14,
+											"character": 10
+										}
+									]
+								},
+								{
+									"id": 142,
+									"name": "info",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 143,
+											"name": "info",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 144,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 145,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 9,
+											"character": 8
+										}
+									]
+								},
+								{
+									"id": 134,
+									"name": "level",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 135,
+											"name": "level",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 136,
+													"name": "newLevelSym",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												},
+												{
+													"id": 137,
+													"name": "setGlobalLevel",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "symbol"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 7,
+											"character": 9
+										}
+									]
+								},
+								{
+									"id": 159,
+									"name": "logFile",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 160,
+											"name": "logFile",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 161,
+													"name": "file",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 13,
+											"character": 11
+										}
+									]
+								},
+								{
+									"id": 154,
+									"name": "out",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 155,
+											"name": "out",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 156,
+													"name": "lvl",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												},
+												{
+													"id": 157,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												},
+												{
+													"id": 158,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 12,
+											"character": 7
+										}
+									]
+								},
+								{
+									"id": 165,
+									"name": "prefix",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 166,
+											"name": "prefix",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 167,
+													"name": "prf",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 15,
+											"character": 10
+										}
+									]
+								},
+								{
+									"id": 146,
+									"name": "warn",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 147,
+											"name": "warn",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 148,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 149,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 10,
+											"character": 8
+										}
+									]
+								}
+							],
+							"groups": [
+								{
+									"title": "Variables",
+									"kind": 32,
+									"children": [
+										130,
+										133,
+										131,
+										132
+									]
+								},
+								{
+									"title": "Functions",
+									"kind": 64,
+									"children": [
+										168,
+										138,
+										150,
+										175,
+										162,
+										142,
+										134,
+										159,
+										154,
+										165,
+										146
+									]
+								}
+							]
+						}
 					},
 					"defaultValue": " gLog('osaCommands')"
 				},
 				{
-					"id": 74,
+					"id": 182,
 					"name": "errorHandler",
 					"kind": 64,
 					"kindString": "Function",
@@ -1049,7 +1882,7 @@
 					},
 					"signatures": [
 						{
-							"id": 75,
+							"id": 183,
 							"name": "errorHandler",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1059,7 +1892,7 @@
 							},
 							"parameters": [
 								{
-									"id": 76,
+									"id": 184,
 									"name": "cmd",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1088,7 +1921,7 @@
 					]
 				},
 				{
-					"id": 71,
+					"id": 179,
 					"name": "responseHandler",
 					"kind": 64,
 					"kindString": "Function",
@@ -1100,7 +1933,7 @@
 					},
 					"signatures": [
 						{
-							"id": 72,
+							"id": 180,
 							"name": "responseHandler",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1110,7 +1943,7 @@
 							},
 							"parameters": [
 								{
-									"id": 73,
+									"id": 181,
 									"name": "cmd",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1136,7 +1969,7 @@
 					]
 				},
 				{
-					"id": 77,
+					"id": 185,
 					"name": "osaCommands",
 					"kind": 2097152,
 					"kindString": "Object literal",
@@ -1149,7 +1982,7 @@
 					},
 					"children": [
 						{
-							"id": 92,
+							"id": 200,
 							"name": "facetime",
 							"kind": 64,
 							"kindString": "Function",
@@ -1162,7 +1995,7 @@
 							},
 							"signatures": [
 								{
-									"id": 93,
+									"id": 201,
 									"name": "facetime",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1173,7 +2006,7 @@
 									},
 									"parameters": [
 										{
-											"id": 94,
+											"id": 202,
 											"name": "appleID",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1208,7 +2041,7 @@
 							]
 						},
 						{
-							"id": 89,
+							"id": 197,
 							"name": "getEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -1227,7 +2060,7 @@
 							},
 							"signatures": [
 								{
-									"id": 90,
+									"id": 198,
 									"name": "getEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1238,7 +2071,7 @@
 									},
 									"parameters": [
 										{
-											"id": 91,
+											"id": 199,
 											"name": "date",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1270,7 +2103,7 @@
 							]
 						},
 						{
-							"id": 116,
+							"id": 224,
 							"name": "getVolume",
 							"kind": 64,
 							"kindString": "Function",
@@ -1283,7 +2116,7 @@
 							},
 							"signatures": [
 								{
-									"id": 117,
+									"id": 225,
 									"name": "getVolume",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1313,7 +2146,7 @@
 							]
 						},
 						{
-							"id": 107,
+							"id": 215,
 							"name": "isRunning",
 							"kind": 64,
 							"kindString": "Function",
@@ -1326,7 +2159,7 @@
 							},
 							"signatures": [
 								{
-									"id": 108,
+									"id": 216,
 									"name": "isRunning",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1337,7 +2170,7 @@
 									},
 									"parameters": [
 										{
-											"id": 109,
+											"id": 217,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1372,7 +2205,7 @@
 							]
 						},
 						{
-							"id": 98,
+							"id": 206,
 							"name": "launch",
 							"kind": 64,
 							"kindString": "Function",
@@ -1385,7 +2218,7 @@
 							},
 							"signatures": [
 								{
-									"id": 99,
+									"id": 207,
 									"name": "launch",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1396,7 +2229,7 @@
 									},
 									"parameters": [
 										{
-											"id": 100,
+											"id": 208,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1431,7 +2264,7 @@
 							]
 						},
 						{
-							"id": 101,
+							"id": 209,
 							"name": "launchScript",
 							"kind": 64,
 							"kindString": "Function",
@@ -1444,7 +2277,7 @@
 							},
 							"signatures": [
 								{
-									"id": 102,
+									"id": 210,
 									"name": "launchScript",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1455,7 +2288,7 @@
 									},
 									"parameters": [
 										{
-											"id": 103,
+											"id": 211,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1490,7 +2323,7 @@
 							]
 						},
 						{
-							"id": 104,
+							"id": 212,
 							"name": "quit",
 							"kind": 64,
 							"kindString": "Function",
@@ -1503,7 +2336,7 @@
 							},
 							"signatures": [
 								{
-									"id": 105,
+									"id": 213,
 									"name": "quit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1514,7 +2347,7 @@
 									},
 									"parameters": [
 										{
-											"id": 106,
+											"id": 214,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1549,7 +2382,7 @@
 							]
 						},
 						{
-							"id": 118,
+							"id": 226,
 							"name": "restart",
 							"kind": 64,
 							"kindString": "Function",
@@ -1562,7 +2395,7 @@
 							},
 							"signatures": [
 								{
-									"id": 119,
+									"id": 227,
 									"name": "restart",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1592,7 +2425,7 @@
 							]
 						},
 						{
-							"id": 95,
+							"id": 203,
 							"name": "say",
 							"kind": 64,
 							"kindString": "Function",
@@ -1605,7 +2438,7 @@
 							},
 							"signatures": [
 								{
-									"id": 96,
+									"id": 204,
 									"name": "say",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1616,7 +2449,7 @@
 									},
 									"parameters": [
 										{
-											"id": 97,
+											"id": 205,
 											"name": "text",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1651,7 +2484,7 @@
 							]
 						},
 						{
-							"id": 83,
+							"id": 191,
 							"name": "sendEmail",
 							"kind": 64,
 							"kindString": "Function",
@@ -1670,7 +2503,7 @@
 							},
 							"signatures": [
 								{
-									"id": 84,
+									"id": 192,
 									"name": "sendEmail",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1681,7 +2514,7 @@
 									},
 									"parameters": [
 										{
-											"id": 85,
+											"id": 193,
 											"name": "subject",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1695,7 +2528,7 @@
 											}
 										},
 										{
-											"id": 86,
+											"id": 194,
 											"name": "to",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1709,7 +2542,7 @@
 											}
 										},
 										{
-											"id": 87,
+											"id": 195,
 											"name": "content",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1724,7 +2557,7 @@
 											"defaultValue": "\"\""
 										},
 										{
-											"id": 88,
+											"id": 196,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1761,7 +2594,7 @@
 							]
 						},
 						{
-							"id": 78,
+							"id": 186,
 							"name": "sendMessage",
 							"kind": 64,
 							"kindString": "Function",
@@ -1774,7 +2607,7 @@
 							},
 							"signatures": [
 								{
-									"id": 79,
+									"id": 187,
 									"name": "sendMessage",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1785,7 +2618,7 @@
 									},
 									"parameters": [
 										{
-											"id": 80,
+											"id": 188,
 											"name": "appleIDs",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1802,7 +2635,7 @@
 											}
 										},
 										{
-											"id": 81,
+											"id": 189,
 											"name": "message",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1816,7 +2649,7 @@
 											}
 										},
 										{
-											"id": 82,
+											"id": 190,
 											"name": "attachments",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1853,7 +2686,7 @@
 							]
 						},
 						{
-							"id": 110,
+							"id": 218,
 							"name": "setBrightness",
 							"kind": 64,
 							"kindString": "Function",
@@ -1866,7 +2699,7 @@
 							},
 							"signatures": [
 								{
-									"id": 111,
+									"id": 219,
 									"name": "setBrightness",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1877,7 +2710,7 @@
 									},
 									"parameters": [
 										{
-											"id": 112,
+											"id": 220,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1912,7 +2745,7 @@
 							]
 						},
 						{
-							"id": 113,
+							"id": 221,
 							"name": "setVolume",
 							"kind": 64,
 							"kindString": "Function",
@@ -1925,7 +2758,7 @@
 							},
 							"signatures": [
 								{
-									"id": 114,
+									"id": 222,
 									"name": "setVolume",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1936,7 +2769,7 @@
 									},
 									"parameters": [
 										{
-											"id": 115,
+											"id": 223,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1976,19 +2809,19 @@
 							"title": "Functions",
 							"kind": 64,
 							"children": [
-								92,
-								89,
-								116,
-								107,
-								98,
-								101,
-								104,
-								118,
-								95,
-								83,
-								78,
-								110,
-								113
+								200,
+								197,
+								224,
+								215,
+								206,
+								209,
+								212,
+								226,
+								203,
+								191,
+								186,
+								218,
+								221
 							]
 						}
 					],
@@ -2010,22 +2843,22 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						70
+						124
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						74,
-						71
+						182,
+						179
 					]
 				},
 				{
 					"title": "Object literals",
 					"kind": 2097152,
 					"children": [
-						77
+						185
 					]
 				}
 			],
@@ -2048,7 +2881,7 @@
 			"originalName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/src/osaLib.ts",
 			"children": [
 				{
-					"id": 3,
+					"id": 57,
 					"name": "consoleLogPrefix",
 					"kind": 32,
 					"kindString": "Variable",
@@ -2069,7 +2902,7 @@
 					"defaultValue": "\"<node-osa>\""
 				},
 				{
-					"id": 4,
+					"id": 58,
 					"name": "consoleLogSuffix",
 					"kind": 32,
 					"kindString": "Variable",
@@ -2105,13 +2938,846 @@
 						}
 					],
 					"type": {
-						"type": "intrinsic",
-						"name": "any"
+						"type": "reflection",
+						"declaration": {
+							"id": 3,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 4,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 5,
+											"name": "_prefix",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 6,
+											"name": "logToFile",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "ltfType"
+											}
+										},
+										{
+											"id": 7,
+											"name": "pathExists",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "peType"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "LogType"
+									}
+								}
+							],
+							"children": [
+								{
+									"id": 8,
+									"name": "DEBUG",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 3,
+											"character": 9
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								},
+								{
+									"id": 11,
+									"name": "ERROR",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 6,
+											"character": 9
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								},
+								{
+									"id": 9,
+									"name": "INFO",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 4,
+											"character": 8
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								},
+								{
+									"id": 10,
+									"name": "WARN",
+									"kind": 32,
+									"kindString": "Variable",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 5,
+											"character": 8
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "symbol"
+									}
+								},
+								{
+									"id": 46,
+									"name": "config",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 47,
+											"name": "config",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 48,
+													"name": "cfg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reflection",
+														"declaration": {
+															"id": 49,
+															"name": "__type",
+															"kind": 65536,
+															"kindString": "Type literal",
+															"flags": {},
+															"children": [
+																{
+																	"id": 50,
+																	"name": "colors",
+																	"kind": 32,
+																	"kindString": "Variable",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+																			"line": 17,
+																			"character": 14
+																		}
+																	],
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "boolean"
+																	}
+																},
+																{
+																	"id": 51,
+																	"name": "format",
+																	"kind": 32,
+																	"kindString": "Variable",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+																			"line": 18,
+																			"character": 14
+																		}
+																	],
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																},
+																{
+																	"id": 52,
+																	"name": "level",
+																	"kind": 32,
+																	"kindString": "Variable",
+																	"flags": {
+																		"isOptional": true
+																	},
+																	"sources": [
+																		{
+																			"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+																			"line": 19,
+																			"character": 13
+																		}
+																	],
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "symbol"
+																	}
+																}
+															],
+															"groups": [
+																{
+																	"title": "Variables",
+																	"kind": 32,
+																	"children": [
+																		50,
+																		51,
+																		52
+																	]
+																}
+															],
+															"sources": [
+																{
+																	"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+																	"line": 16,
+																	"character": 15
+																}
+															]
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "void"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 16,
+											"character": 10
+										}
+									]
+								},
+								{
+									"id": 16,
+									"name": "debug",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 17,
+											"name": "debug",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 18,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 19,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 8,
+											"character": 9
+										}
+									]
+								},
+								{
+									"id": 28,
+									"name": "error",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 29,
+											"name": "error",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 30,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 31,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 11,
+											"character": 9
+										}
+									]
+								},
+								{
+									"id": 53,
+									"name": "examine",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 54,
+											"name": "examine",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 55,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												},
+												{
+													"id": 56,
+													"name": "depth",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 21,
+											"character": 11
+										}
+									]
+								},
+								{
+									"id": 40,
+									"name": "format",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 41,
+											"name": "format",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 42,
+													"name": "fmtStr",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 14,
+											"character": 10
+										}
+									]
+								},
+								{
+									"id": 20,
+									"name": "info",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 21,
+											"name": "info",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 22,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 23,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 9,
+											"character": 8
+										}
+									]
+								},
+								{
+									"id": 12,
+									"name": "level",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 13,
+											"name": "level",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 14,
+													"name": "newLevelSym",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												},
+												{
+													"id": 15,
+													"name": "setGlobalLevel",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "symbol"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 7,
+											"character": 9
+										}
+									]
+								},
+								{
+									"id": 37,
+									"name": "logFile",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 38,
+											"name": "logFile",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 39,
+													"name": "file",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 13,
+											"character": 11
+										}
+									]
+								},
+								{
+									"id": 32,
+									"name": "out",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 33,
+											"name": "out",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 34,
+													"name": "lvl",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												},
+												{
+													"id": 35,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												},
+												{
+													"id": 36,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 12,
+											"character": 7
+										}
+									]
+								},
+								{
+									"id": 43,
+									"name": "prefix",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 44,
+											"name": "prefix",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 45,
+													"name": "prf",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 15,
+											"character": 10
+										}
+									]
+								},
+								{
+									"id": 24,
+									"name": "warn",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 25,
+											"name": "warn",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 26,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 27,
+													"name": "log",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Promise",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												]
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 10,
+											"character": 8
+										}
+									]
+								}
+							],
+							"groups": [
+								{
+									"title": "Variables",
+									"kind": 32,
+									"children": [
+										8,
+										11,
+										9,
+										10
+									]
+								},
+								{
+									"title": "Functions",
+									"kind": 64,
+									"children": [
+										46,
+										16,
+										28,
+										53,
+										40,
+										20,
+										12,
+										37,
+										32,
+										43,
+										24
+									]
+								}
+							]
+						}
 					},
 					"defaultValue": " gLog('osalib')"
 				},
 				{
-					"id": 5,
+					"id": 59,
 					"name": "extractLogs",
 					"kind": 64,
 					"kindString": "Function",
@@ -2120,14 +3786,14 @@
 					},
 					"signatures": [
 						{
-							"id": 6,
+							"id": 60,
 							"name": "extractLogs",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 7,
+									"id": 61,
 									"name": "stderr",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2153,7 +3819,7 @@
 					]
 				},
 				{
-					"id": 8,
+					"id": 62,
 					"name": "osaJS",
 					"kind": 64,
 					"kindString": "Function",
@@ -2162,7 +3828,7 @@
 					},
 					"signatures": [
 						{
-							"id": 9,
+							"id": 63,
 							"name": "osaJS",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -2178,7 +3844,7 @@
 							},
 							"parameters": [
 								{
-									"id": 10,
+									"id": 64,
 									"name": "osaFunction",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2189,7 +3855,7 @@
 									}
 								},
 								{
-									"id": 11,
+									"id": 65,
 									"name": "args",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -2231,8 +3897,8 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						3,
-						4,
+						57,
+						58,
 						2
 					]
 				},
@@ -2240,8 +3906,8 @@
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						5,
-						8
+						59,
+						62
 					]
 				}
 			],
@@ -2254,7 +3920,7 @@
 			]
 		},
 		{
-			"id": 121,
+			"id": 229,
 			"name": "\"overview\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -2280,11 +3946,11 @@
 			"title": "External modules",
 			"kind": 1,
 			"children": [
-				120,
-				12,
-				69,
+				228,
+				66,
+				123,
 				1,
-				121
+				229
 			]
 		}
 	]
