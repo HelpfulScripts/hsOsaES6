@@ -1408,59 +1408,6 @@
 									]
 								},
 								{
-									"id": 175,
-									"name": "examine",
-									"kind": 64,
-									"kindString": "Function",
-									"flags": {},
-									"signatures": [
-										{
-											"id": 176,
-											"name": "examine",
-											"kind": 4096,
-											"kindString": "Call signature",
-											"flags": {},
-											"parameters": [
-												{
-													"id": 177,
-													"name": "msg",
-													"kind": 32768,
-													"kindString": "Parameter",
-													"flags": {},
-													"type": {
-														"type": "intrinsic",
-														"name": "any"
-													}
-												},
-												{
-													"id": 178,
-													"name": "depth",
-													"kind": 32768,
-													"kindString": "Parameter",
-													"flags": {
-														"isOptional": true
-													},
-													"type": {
-														"type": "intrinsic",
-														"name": "number"
-													}
-												}
-											],
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"sources": [
-										{
-											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
-											"line": 21,
-											"character": 11
-										}
-									]
-								},
-								{
 									"id": 162,
 									"name": "format",
 									"kind": 64,
@@ -1558,6 +1505,59 @@
 											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
 											"line": 9,
 											"character": 8
+										}
+									]
+								},
+								{
+									"id": 175,
+									"name": "inspect",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 176,
+											"name": "inspect",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 177,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												},
+												{
+													"id": 178,
+													"name": "depth",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 21,
+											"character": 11
 										}
 									]
 								},
@@ -1854,9 +1854,9 @@
 										168,
 										138,
 										150,
-										175,
 										162,
 										142,
+										175,
 										134,
 										159,
 										154,
@@ -3315,59 +3315,6 @@
 									]
 								},
 								{
-									"id": 53,
-									"name": "examine",
-									"kind": 64,
-									"kindString": "Function",
-									"flags": {},
-									"signatures": [
-										{
-											"id": 54,
-											"name": "examine",
-											"kind": 4096,
-											"kindString": "Call signature",
-											"flags": {},
-											"parameters": [
-												{
-													"id": 55,
-													"name": "msg",
-													"kind": 32768,
-													"kindString": "Parameter",
-													"flags": {},
-													"type": {
-														"type": "intrinsic",
-														"name": "any"
-													}
-												},
-												{
-													"id": 56,
-													"name": "depth",
-													"kind": 32768,
-													"kindString": "Parameter",
-													"flags": {
-														"isOptional": true
-													},
-													"type": {
-														"type": "intrinsic",
-														"name": "number"
-													}
-												}
-											],
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"sources": [
-										{
-											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
-											"line": 21,
-											"character": 11
-										}
-									]
-								},
-								{
 									"id": 40,
 									"name": "format",
 									"kind": 64,
@@ -3465,6 +3412,59 @@
 											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
 											"line": 9,
 											"character": 8
+										}
+									]
+								},
+								{
+									"id": 53,
+									"name": "inspect",
+									"kind": 64,
+									"kindString": "Function",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 54,
+											"name": "inspect",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 55,
+													"name": "msg",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												},
+												{
+													"id": 56,
+													"name": "depth",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isOptional": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"sources": [
+										{
+											"fileName": "/Users/sth1pal/Documents/Development/JavaScript/nodejs/ts6/dev/hsLibs/node/hsOsaES6/node_modules/hsutil/log.d.ts",
+											"line": 21,
+											"character": 11
 										}
 									]
 								},
@@ -3761,9 +3761,9 @@
 										46,
 										16,
 										28,
-										53,
 										40,
 										20,
+										53,
 										12,
 										37,
 										32,
