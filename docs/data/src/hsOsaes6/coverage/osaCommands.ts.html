@@ -514,7 +514,7 @@
  * {@link https://github.com/brandonhorst/node-osa brandonhorst's node-osa} module.
  */
 &nbsp;
-import { cp }           from 'hsnode';
+import { exec }           from 'hsnode';
 import { log as gLog }  from 'hsnode';  const log = gLog('osaCommands');
 import { OSXcommands}   from './osaCalls';
 import { osaJS }        from './osaLib';
@@ -607,7 +607,7 @@ export const osaCommands = {
      */
     facetime: <span class="fstat-no" title="function not covered" >(a</span>ppleID:string) :Promise&lt;any&gt;=&gt; { 
 <span class="cstat-no" title="statement not covered" >        log.debug('starting facetime call with ' + appleID);</span>
-<span class="cstat-no" title="statement not covered" >        return cp.exec('open facetime://' + appleID)</span>
+<span class="cstat-no" title="statement not covered" >        return exec('open facetime://' + appleID)</span>
             .catch(errorHandler('facetime ' + appleID));
     },
 &nbsp;
@@ -684,7 +684,7 @@ export const osaCommands = {
         const slash = name.lastIndexOf('/');
         <span class="missing-if-branch" title="if path not taken" >I</span>if (slash &gt;= 0) { <span class="cstat-no" title="statement not covered" >name = name.substring(slash+1, name.lastIndexOf('.')); </span>}
         log.debug(`checking if '${name}' is running`);
-        return cp.exec('ps -cx')
+        return exec('ps -cx')
             .then(result =&gt; {
                 log.debug(`isRunning result: ${result.stdout.indexOf(name)} ${result.stdout}`);
                 return (result.stdout.indexOf(name) &gt; 0);

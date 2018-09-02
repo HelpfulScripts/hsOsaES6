@@ -4,7 +4,7 @@
  * {@link https://github.com/brandonhorst/node-osa brandonhorst's node-osa} module.
  */
 
-import { cp }           from 'hsnode';
+import { exec }           from 'hsnode';
 import { log as gLog }  from 'hsnode';  const log = gLog('osaCommands');
 import { OSXcommands}   from './osaCalls';
 import { osaJS }        from './osaLib';
@@ -97,7 +97,7 @@ export const osaCommands = {
      */
     facetime: (appleID:string) :Promise<any>=> { 
         log.debug('starting facetime call with ' + appleID);
-        return cp.exec('open facetime://' + appleID)
+        return exec('open facetime://' + appleID)
             .catch(errorHandler('facetime ' + appleID));
     },
 
@@ -174,7 +174,7 @@ export const osaCommands = {
         const slash = name.lastIndexOf('/');
         if (slash >= 0) { name = name.substring(slash+1, name.lastIndexOf('.')); }
         log.debug(`checking if '${name}' is running`);
-        return cp.exec('ps -cx')
+        return exec('ps -cx')
             .then(result => {
                 log.debug(`isRunning result: ${result.stdout.indexOf(name)} ${result.stdout}`);
                 return (result.stdout.indexOf(name) > 0);

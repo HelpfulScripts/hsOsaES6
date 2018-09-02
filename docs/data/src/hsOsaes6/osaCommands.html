@@ -19,7 +19,7 @@
 <span id=4 class="line">&nbsp;&nbsp;&nbsp;4</span>&nbsp;*&nbsp;{@link&nbsp;https://github.com/brandonhorst/node-osa&nbsp;brandonhorst's&nbsp;node-osa}&nbsp;module.<br>
 <span id=5 class="line">&nbsp;&nbsp;&nbsp;5</span>&nbsp;*/</comment><br>
 <span id=6 class="line">&nbsp;&nbsp;&nbsp;6</span><br>
-<span id=7 class="line">&nbsp;&nbsp;&nbsp;7</span>import&nbsp;{&nbsp;cp&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;'hsnode';<br>
+<span id=7 class="line">&nbsp;&nbsp;&nbsp;7</span>import&nbsp;{&nbsp;exec&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;'hsnode';<br>
 <span id=8 class="line">&nbsp;&nbsp;&nbsp;8</span>import&nbsp;{&nbsp;log&nbsp;as&nbsp;gLog&nbsp;}&nbsp;&nbsp;from&nbsp;'hsnode';&nbsp;&nbsp;const&nbsp;log&nbsp;=&nbsp;gLog('osaCommands');<br>
 <span id=9 class="line">&nbsp;&nbsp;&nbsp;9</span>import&nbsp;{&nbsp;OSXcommands}&nbsp;&nbsp;&nbsp;from&nbsp;'./osaCalls';<br>
 <span id=10 class="line">&nbsp;&nbsp;10</span>import&nbsp;{&nbsp;osaJS&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;'./osaLib';<br>
@@ -112,7 +112,7 @@
 <span id=97 class="line">&nbsp;&nbsp;97</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</comment><br>
 <span id=98 class="line">&nbsp;&nbsp;98</span>&nbsp;&nbsp;&nbsp;&nbsp;facetime:&nbsp;(appleID:string)&nbsp;:Promise<any>=>&nbsp;{&nbsp;<br>
 <span id=99 class="line">&nbsp;&nbsp;99</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log.debug('starting&nbsp;facetime&nbsp;call&nbsp;with&nbsp;'&nbsp;+&nbsp;appleID);<br>
-<span id=100 class="line">&nbsp;100</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cp.exec('open&nbsp;facetime://'&nbsp;+&nbsp;appleID)<br>
+<span id=100 class="line">&nbsp;100</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;exec('open&nbsp;facetime://'&nbsp;+&nbsp;appleID)<br>
 <span id=101 class="line">&nbsp;101</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.catch(errorHandler('facetime&nbsp;'&nbsp;+&nbsp;appleID));<br>
 <span id=102 class="line">&nbsp;102</span>&nbsp;&nbsp;&nbsp;&nbsp;},<br>
 <span id=103 class="line">&nbsp;103</span><br>
@@ -189,7 +189,7 @@
 <span id=174 class="line">&nbsp;174</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;slash&nbsp;=&nbsp;name.lastIndexOf('/');<br>
 <span id=175 class="line">&nbsp;175</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(slash&nbsp;>=&nbsp;0)&nbsp;{&nbsp;name&nbsp;=&nbsp;name.substring(slash+1,&nbsp;name.lastIndexOf('.'));&nbsp;}<br>
 <span id=176 class="line">&nbsp;176</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log.debug(`checking&nbsp;if&nbsp;'${name}'&nbsp;is&nbsp;running`);<br>
-<span id=177 class="line">&nbsp;177</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cp.exec('ps&nbsp;-cx')<br>
+<span id=177 class="line">&nbsp;177</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;exec('ps&nbsp;-cx')<br>
 <span id=178 class="line">&nbsp;178</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.then(result&nbsp;=>&nbsp;{<br>
 <span id=179 class="line">&nbsp;179</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log.debug(`isRunning&nbsp;result:&nbsp;${result.stdout.indexOf(name)}&nbsp;${result.stdout}`);<br>
 <span id=180 class="line">&nbsp;180</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;(result.stdout.indexOf(name)&nbsp;>&nbsp;0);<br>

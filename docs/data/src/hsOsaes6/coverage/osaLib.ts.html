@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>27/27</span>
+        <span class='fraction'>26/26</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>24/24</span>
+        <span class='fraction'>23/23</span>
       </div>
     </div>
     <p class="quiet">
@@ -113,9 +113,7 @@
 <a name='L65'></a><a href='#L65'>65</a>
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -183,8 +181,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-import { cp }           from 'hsnode'; 
-import { log as gLog }  from 'hsnode';  const log = gLog('osalib');
+import * as node  from 'hsnode';  const log = node.log('osalib');
 &nbsp;
 // export function osa
 // takes a function, any number of arguments, and a callback.
@@ -237,7 +234,7 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise&lt;any&gt; {
 &nbsp;
     log.debug(executeString);
     // execute osascript as promise
-    return cp.exec(executeString)
+    return node.exec(executeString)
         .then((result:{stdout:string, stderr:string}) =&gt; {
             const logResult = extractLogs(result.stderr);
             return {stdout:result.stdout, logResult:logResult};

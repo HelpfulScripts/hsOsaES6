@@ -1,6 +1,5 @@
 
-import { cp }           from 'hsnode'; 
-import { log as gLog }  from 'hsnode';  const log = gLog('osalib');
+import * as node  from 'hsnode';  const log = node.log('osalib');
 
 // export function osa
 // takes a function, any number of arguments, and a callback.
@@ -53,7 +52,7 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise<any> {
 
     log.debug(executeString);
     // execute osascript as promise
-    return cp.exec(executeString)
+    return node.exec(executeString)
         .then((result:{stdout:string, stderr:string}) => {
             const logResult = extractLogs(result.stderr);
             return {stdout:result.stdout, logResult:logResult};

@@ -2891,7 +2891,7 @@
 					"sources": [
 						{
 							"fileName": "osaLib.ts",
-							"line": 10,
+							"line": 9,
 							"character": 22
 						}
 					],
@@ -2912,7 +2912,7 @@
 					"sources": [
 						{
 							"fileName": "osaLib.ts",
-							"line": 11,
+							"line": 10,
 							"character": 22
 						}
 					],
@@ -2933,8 +2933,8 @@
 					"sources": [
 						{
 							"fileName": "osaLib.ts",
-							"line": 3,
-							"character": 49
+							"line": 2,
+							"character": 43
 						}
 					],
 					"type": {
@@ -3774,7 +3774,7 @@
 							]
 						}
 					},
-					"defaultValue": " gLog('osalib')"
+					"defaultValue": " node.log('osalib')"
 				},
 				{
 					"id": 59,
@@ -3813,7 +3813,7 @@
 					"sources": [
 						{
 							"fileName": "osaLib.ts",
-							"line": 13,
+							"line": 12,
 							"character": 27
 						}
 					]
@@ -3886,7 +3886,7 @@
 					"sources": [
 						{
 							"fileName": "osaLib.ts",
-							"line": 23,
+							"line": 22,
 							"character": 21
 						}
 					]
