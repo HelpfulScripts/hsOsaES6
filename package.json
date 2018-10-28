@@ -12,7 +12,7 @@
     "osascript",
     "automation",
     "mac"
-  ],
+  ], 
   "description": "Helpful Scripts OSA automation via Javascript",
   "license": "MIT",
   "homepage": "https://helpfulscripts.github.io/hsOsaES6/#!/api/hsOsaes6/0",
@@ -34,6 +34,7 @@
   "plugins": [],
   "devDependencies": {
     "@types/node": "^8.0.0",
+    "@types/jest": "^23.3.1",
     "grunt": "^1.0.3",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
