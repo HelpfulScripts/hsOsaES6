@@ -1,6 +1,6 @@
 hsOsaES6
 ========
-[![GitHub version](https://badge.fury.io/gh/HelpfulScripts%2FhsOsaES6@2x.png)](https://badge.fury.io/gh/HelpfulScripts%2FhsOsaES6)
+[![GitHub version](https://badge.fury.io/gh/helpfulscripts%2Fhsosaes6.svg)](https://badge.fury.io/gh/helpfulscripts%2Fhsosaes6)
 [![npm version](https://badge.fury.io/js/hsosaes6.svg)](https://badge.fury.io/js/hsosaes6)
 [![docs](https://img.shields.io/badge/hsDocs--blue.svg)](https://helpfulscripts.github.io/hsOsaES6/#!/api/hsOsaes6/0)
 [![Build Status](https://travis-ci.org/HelpfulScripts/hsOsaES6.svg?branch=master)](https://travis-ci.org/HelpfulScripts/hsOsaES6)
