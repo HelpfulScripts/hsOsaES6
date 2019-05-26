@@ -12,4 +12,4 @@ Helpful Scripts ES6 interface to various OSX functions using the OSA Architectur
 ## Installation
 `npm i hsosaes6`
 
-See [docs](https://helpfulscripts.github.io/hsOsaES6/#!/api/hsOsaES6/0) for details 
+See [docs](https://helpfulscripts.github.io/hsOsaES6/#!/api/hsOsaes6/0) for details 
