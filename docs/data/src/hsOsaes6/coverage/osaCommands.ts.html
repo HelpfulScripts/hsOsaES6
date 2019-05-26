@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">67.21% </span>
+        <span class="strong">67.74% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>41/61</span>
+        <span class='fraction'>42/62</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">31.58% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>15/23</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">70.18% </span>
+        <span class="strong">70.69% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>40/57</span>
+        <span class='fraction'>41/58</span>
       </div>
     </div>
   </div>
@@ -274,7 +274,8 @@
 229
 230
 231
-232</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+232
+233</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -285,6 +286,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -511,11 +513,12 @@
  * {@link https://github.com/brandonhorst/node-osa brandonhorst's node-osa} module.
  */
 &nbsp;
-import { exec }           from 'hsnode';
+import { node }           from 'hsnode';
 import { log as gLog }  from 'hsnode';  const log = gLog('osaCommands');
 import { OSXcommands}   from './osaCalls';
 import { osaJS }        from './osaLib';
 &nbsp;
+const exec = node.child_process.exec;
 // log.level(log.DEBUG);
 &nbsp;
 /**

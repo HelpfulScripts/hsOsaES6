@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>26/26</span>
+        <span class='fraction'>27/27</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>23/23</span>
+        <span class='fraction'>25/25</span>
       </div>
     </div>
   </div>
@@ -110,7 +110,11 @@
 65
 66
 67
-68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+68
+69
+70</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,7 +182,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-import * as node  from 'hsnode';  const log = node.log('osalib');
+import * as hsNode  from 'hsnode';  
+const log = hsNode.log('osalib');
+const exec = hsNode.node.child_process.exec;
 &nbsp;
 // export function osa
 // takes a function, any number of arguments, and a callback.
@@ -231,7 +237,7 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise&lt;any&gt; {
 &nbsp;
     log.debug(executeString);
     // execute osascript as promise
-    return node.exec(executeString)
+    return exec(executeString)
         .then((result:{stdout:string, stderr:string}) =&gt; {
             const logResult = extractLogs(result.stderr);
             return {stdout:result.stdout, logResult:logResult};
