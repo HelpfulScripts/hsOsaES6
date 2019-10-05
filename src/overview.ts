@@ -2,8 +2,8 @@
  * # hsOsaES6
  * 
  * Helpful Scripts ES6 interface to various OSX functions using the OSA Architecture. 
- * [`[Github page]`](https://github.com/HelpfulScripts/hsOsaES6)
- * [`[Coverage Info]`](./data/src/hsOsaes6/coverage/)
+ * <a href="https://github.com/HelpfulScripts/hsOsaES6" target="_blank">[Github page]</a>
+ * <a href="./data/src/hsOsaes6/coverage/" target="_blank">[Coverage Info]</a>
  * ___
  * 
  * Provides a means for calling JavaScript functions in Apple's OSA environment. 
