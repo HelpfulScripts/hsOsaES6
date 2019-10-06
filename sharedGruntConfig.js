@@ -119,8 +119,8 @@ module.exports = (grunt, dir, dependencies, type, lib) => {
                 { expand:true, cwd: './',               // project-specific docs css files
                     src:[`${lib}.css*`], dest:'docs' 
                 },
-                { expand:true, cwd: './bin',            // project-specific docs css files
-                    src:[`${lib}.js`, `${lib}.min.js`], dest:'docs' 
+                { expand:true, cwd: './bin',            // project-specific docs files: libraries and configurations (*.json)
+                    src:[`${lib}.js`, `${lib}.min.js`, `*.json`], dest:'docs' 
                 }
             ]},
             example:{ expand:true, cwd: 'src/example', 
@@ -153,7 +153,8 @@ module.exports = (grunt, dir, dependencies, type, lib) => {
         },
         less: {
             options: {
-                sourceMap: true
+                sourceMap: true,
+                sourceMapURL: '<%= lib %>.css.map'
             },
             css: {
                 files: [{
