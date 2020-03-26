@@ -1,6 +1,6 @@
 
 import * as hsNode  from 'hsnode';  
-const log = hsNode.log('osalib');
+const log = new hsNode.Log('osalib');
 const exec = hsNode.node.child_process.exec;
 
 // export function osa

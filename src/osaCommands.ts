@@ -4,8 +4,8 @@
  * {@link https://github.com/brandonhorst/node-osa brandonhorst's node-osa} module.
  */
 
-import { node }           from 'hsnode';
-import { log as gLog }  from 'hsnode';  const log = gLog('osaCommands');
+import { node }         from 'hsnode';
+import { Log }          from 'hsnode';  const log = new Log('osaCommands');
 import { OSXcommands}   from './osaCalls';
 import { osaJS }        from './osaLib';
 
