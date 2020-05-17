@@ -6,7 +6,7 @@ describe('OSA Commands', ()=>{
         it('should setVolume to 1', () => 
             osaCommands.setVolume(1)
             .then((res) => {
-                log.debug(`setVolume: ${res}`);
+                log.debug(()=>`setVolume: ${res}`);
                 return expect(res).toBe(true);
             })
         );
@@ -15,7 +15,7 @@ describe('OSA Commands', ()=>{
         it('should getVolume', () =>
             osaCommands.getVolume()
             .then((res) => {
-                log.debug(`getVolume: ${res}`);
+                log.debug(()=>`getVolume: ${res}`);
                 expect(res).toHaveProperty('alertVolume');
                 expect(res).toHaveProperty('outputVolume');
                 return expect(res.outputVolume).toEqual(14);
@@ -28,7 +28,7 @@ describe('OSA Commands', ()=>{
         it('should setBrightness', () =>
             osaCommands.setBrightness(0.9)
             .then((res) => {
-                log.debug(`setBrightness: ${typeof res} ${res}`);
+                log.debug(()=>`setBrightness: ${typeof res} ${res}`);
                 if (typeof res==='string') {
                     return expect(res).toMatch(/osascript is not allowed assistive access/);
                 } else {
@@ -41,7 +41,7 @@ describe('OSA Commands', ()=>{
         it('should launch', () =>
             osaCommands.launch('Mail')
             .then((res) => {
-                log.debug(`launch: ${res}`);
+                log.debug(()=>`launch: ${res}`);
                 return expect(res).toEqual(true);
             })
         );
@@ -51,7 +51,7 @@ describe('OSA Commands', ()=>{
             osaCommands.launch('Mail')
             .then(()=> osaCommands.isRunning('Mail'))
             .then((res) => {
-                log.debug(`isRunning: ${res}`);
+                log.debug(()=>`isRunning: ${res}`);
                 return expect(res).toEqual(true);
             })
         );
@@ -60,7 +60,7 @@ describe('OSA Commands', ()=>{
         it('should quit', () =>
             osaCommands.quit('Mail')
             .then((res) => {
-                log.debug(`quit: ${res}`);
+                log.debug(()=>`quit: ${res}`);
                 return expect(res).toEqual(false);
             })
         );

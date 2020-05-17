@@ -28,7 +28,7 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise<any> {
     // conver these args to json
     // to do: replace ':' in a
     const jsonArgs = args.map(a => `${JSON.stringify(a)}`).join(',');
-    log.debug(`arguments to call: ${jsonArgs}`);
+    log.debug(()=>`arguments to call: ${jsonArgs}`);
   
     // augment console.log to encapsulate logs with <node-osa>...</node-osa> tags
     const consoleLogPatch = `
@@ -42,7 +42,7 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise<any> {
 
     // build a string to call osaFunction, pass in args, and evaulate to
     // the JSON representation of the return value, then call it with osascript
-    log.debug(osaFunction.toString());
+    log.debug(()=>osaFunction.toString());
     const functionCallString = consoleLogPatch + 'JSON.stringify((' + osaFunction.toString() + ')(' + jsonArgs + '));';
     const escapedCall = functionCallString
         .replace(/ +/g, ' ')      // replace multiple whitespaces by single whitespaces

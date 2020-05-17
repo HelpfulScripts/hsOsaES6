@@ -18,12 +18,12 @@ const exec = node.child_process.exec;
  */
 const responseHandler = (cmd:string) => {
     return (result:{stdout:string, logResult:string}):string => {
-        if (result.logResult) { log.debug(`messages from executing ${cmd}: ${result.logResult}`); }
+        if (result.logResult) { log.debug(()=>`messages from executing ${cmd}: ${result.logResult}`); }
         if (result.stdout) { 
-            log.debug(`call ${cmd} returned with result ${result.stdout}, ${typeof result.stdout}`); 
+            log.debug(()=>`call ${cmd} returned with result ${result.stdout}, ${typeof result.stdout}`); 
             return JSON.parse(result.stdout);
         } else { 
-            log.debug(`call ${cmd} returned without stdout`); 
+            log.debug(()=>`call ${cmd} returned without stdout`); 
             return;
         }
     };
@@ -55,7 +55,7 @@ export const osaCommands = {
      * @return a promise that resolves to the returned result 
      */
     sendMessage: (appleIDs:string[], message:string, attachments?:string[]):Promise<any> => { 
-        log.debug(`sending Message to ${appleIDs.join(', ')}, content '${message}', ${attachments?attachments.length:0} attachments`);
+        log.debug(()=>`sending Message to ${appleIDs.join(', ')}, content '${message}', ${attachments?attachments.length:0} attachments`);
         return osaJS(OSXcommands.osaSendMessage, appleIDs, message, attachments)
             .then(responseHandler('osaSendMessage'))
             .catch(errorHandler('osaSendMessage ' + message));
@@ -70,7 +70,7 @@ export const osaCommands = {
      * @todo enable for multiple `to`s
      */
     sendEmail: (subject:string, to:string[], content='', attachments?:string[]):Promise<any> => { 
-        log.debug(`sending email to '${to.join(', ')}' with subject '${subject}', content '${content}', ${attachments?attachments.length:0} attachments`);
+        log.debug(()=>`sending email to '${to.join(', ')}' with subject '${subject}', content '${content}', ${attachments?attachments.length:0} attachments`);
         return osaJS(OSXcommands.osaSendEmail, subject, to[0], content, attachments)
             .then(responseHandler('osaSendEmail'))
             .catch(errorHandler('osaSendEmail ' + subject));
@@ -85,7 +85,7 @@ export const osaCommands = {
      * @todo enable for multiple `to`s
      */
     getEmail: (date:Date):Promise<any> => { 
-        log.debug(`getting emails`);
+        log.debug(()=>`getting emails`);
         return osaJS(OSXcommands.osaGetEmail, date)
             .then(responseHandler('osaGetEmail'))
             .catch(errorHandler('osaGetEmail'));
@@ -97,7 +97,7 @@ export const osaCommands = {
      * @return a promise that resolves to the returned result 
      */
     facetime: (appleID:string) :Promise<any>=> { 
-        log.debug('starting facetime call with ' + appleID);
+        log.debug(()=>'starting facetime call with ' + appleID);
         return exec('open facetime://' + appleID)
             .catch(errorHandler('facetime ' + appleID));
     },
@@ -108,7 +108,7 @@ export const osaCommands = {
      * @return a promise that resolves to the returned result 
      */
     say: (text:string):Promise<any> => { 
-        log.debug('saying \'' + text + '\'');
+        log.debug(()=>'saying \'' + text + '\'');
         return osaJS(OSXcommands.osaSay, text)
             .then(responseHandler('osaSay'))
             .then(() => `I said '${text}'`)
@@ -121,7 +121,7 @@ export const osaCommands = {
      * @return a promise that resolves to True if the application is running, else False 
      */
     launch: (name:string):Promise<any> => { 
-        log.debug('launching \'' + name + '\'');
+        log.debug(()=>'launching \'' + name + '\'');
         return osaJS(OSXcommands.osaLaunch, name)
             .then(responseHandler('osaLaunch'))
             .then(result => {
@@ -137,11 +137,11 @@ export const osaCommands = {
      * @return a promise that resolves to True if the script is running, else False 
      */
     launchScript: (name:string):Promise<any> => { 
-        log.debug('launching \'' + name + '\'');
+        log.debug(()=>'launching \'' + name + '\'');
         return osaJS(OSXcommands.osaLaunchScript, name)
             .then(responseHandler('osaLaunchScript'))
             .then(result => {
-                log.debug(name + ' running: ' + result);
+                log.debug(()=>name + ' running: ' + result);
                 return result? true : false;
             })
             .catch(errorHandler('osaLaunchScript ' + name));
@@ -156,11 +156,11 @@ export const osaCommands = {
     quit: (name:string):Promise<any> => { 
         let i = name.lastIndexOf('/');
         if (i>0) { name = name.substr(i+1); }
-        log.debug('quitting \'' + name + '\'');
+        log.debug(()=>'quitting \'' + name + '\'');
         return osaJS(OSXcommands.osaQuit, name)
             .then(responseHandler('osaQuit'))
             .then(result => {
-                log.debug(name + ' running: ' + result);
+                log.debug(()=>name + ' running: ' + result);
                 return result? false : true;
             })
             .catch(errorHandler('osaQuit ' + name));
@@ -174,10 +174,10 @@ export const osaCommands = {
     isRunning: (name:string):Promise<any> => {
         const slash = name.lastIndexOf('/');
         if (slash >= 0) { name = name.substring(slash+1, name.lastIndexOf('.')); }
-        log.debug(`checking if '${name}' is running`);
+        log.debug(()=>`checking if '${name}' is running`);
         return exec('ps -cx')
             .then(result => {
-                log.debug(`isRunning result: ${result.stdout.indexOf(name)} ${result.stdout}`);
+                log.debug(()=>`isRunning result: ${result.stdout.indexOf(name)} ${result.stdout}`);
                 return (result.stdout.indexOf(name) > 0);
                 })
             .catch(errorHandler('isRunning ' + name));
@@ -189,7 +189,7 @@ export const osaCommands = {
      * @return a promise that resolves to undefined 
      */
     setBrightness: (value:number):Promise<any> => {
-        log.debug('setting brightness to ' + value);
+        log.debug(()=>'setting brightness to ' + value);
         return osaJS(OSXcommands.osaBrightness, value)
             .then(responseHandler('osaBrightness'))
             .then(() => osaCommands.quit("System Preferences"))
@@ -202,7 +202,7 @@ export const osaCommands = {
      * @return a promise that resolves to undefined 
      */
     setVolume: (value:number):Promise<any> => {
-        log.debug('setting volume to ' + value);
+        log.debug(()=>'setting volume to ' + value);
         return osaJS(OSXcommands.osaVolume, value)
             .then(responseHandler('osaVolume'))
             .catch(errorHandler('osaVolume ' + value));
@@ -214,7 +214,7 @@ export const osaCommands = {
      * @return a promise that resolves to undefined 
      */
     getVolume: ():Promise<any> => {
-        log.debug('getting volume');
+        log.debug(()=>'getting volume');
         return osaJS(OSXcommands.osaVolumeSettings)
             .then(responseHandler('osaVolumeSettings'))
             .catch(errorHandler('osaVolumeSettings'));
@@ -225,7 +225,7 @@ export const osaCommands = {
      * @return a promise that resolves to undefined 
      */
     restart: ():Promise<any> => {
-        log.debug('restarting...');
+        log.debug(()=>'restarting...');
         return osaJS(OSXcommands.osaRestart)
             .then(responseHandler('osaRestart'))
             .catch(errorHandler('osaRestart '));
