@@ -4,12 +4,12 @@
  * {@link https://github.com/brandonhorst/node-osa brandonhorst's node-osa} module.
  */
 
-import { node }         from 'hsnode';
+import { cp }           from 'hsnode';
 import { Log }          from 'hsnode';  const log = new Log('osaCommands');
 import { OSXcommands}   from './osaCalls';
 import { osaJS }        from './osaLib';
 
-const exec = node.child_process.exec;
+const exec = cp.exec;
 // log.level(log.DEBUG);
 
 /**

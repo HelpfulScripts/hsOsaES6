@@ -8,7 +8,7 @@
 			"id": 136,
 			"name": "\"index\"",
 			"kind": 1,
-			"kindString": "External module",
+			"kindString": "Module",
 			"flags": {
 				"isExported": true
 			},
@@ -57,7 +57,7 @@
 			"id": 20,
 			"name": "\"osaCalls\"",
 			"kind": 1,
-			"kindString": "External module",
+			"kindString": "Module",
 			"flags": {
 				"isExported": true
 			},
@@ -1097,7 +1097,7 @@
 			"id": 77,
 			"name": "\"osaCommands\"",
 			"kind": 1,
-			"kindString": "External module",
+			"kindString": "Module",
 			"flags": {
 				"isExported": true
 			},
@@ -1179,9 +1179,9 @@
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/index.d.ts",
-																	"line": 7,
-																	"character": 18
+																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+																	"line": 4,
+																	"character": 14
 																}
 															],
 															"type": {
@@ -1197,9 +1197,9 @@
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/index.d.ts",
-																	"line": 6,
-																	"character": 18
+																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+																	"line": 3,
+																	"character": 14
 																}
 															],
 															"type": {
@@ -1220,9 +1220,9 @@
 													],
 													"sources": [
 														{
-															"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/index.d.ts",
-															"line": 5,
-															"character": 58
+															"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+															"line": 2,
+															"character": 54
 														}
 													]
 												}
@@ -1234,7 +1234,7 @@
 							]
 						}
 					},
-					"defaultValue": "node.child_process.exec"
+					"defaultValue": "cp.exec"
 				},
 				{
 					"id": 78,
@@ -1253,7 +1253,7 @@
 					],
 					"type": {
 						"type": "reference",
-						"name": "LogServer"
+						"name": "Log"
 					},
 					"defaultValue": "new Log('osaCommands')"
 				},
@@ -2331,7 +2331,7 @@
 			"id": 1,
 			"name": "\"osaLib\"",
 			"kind": 1,
-			"kindString": "External module",
+			"kindString": "Module",
 			"flags": {
 				"isExported": true
 			},
@@ -2455,9 +2455,9 @@
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/index.d.ts",
-																	"line": 7,
-																	"character": 18
+																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+																	"line": 4,
+																	"character": 14
 																}
 															],
 															"type": {
@@ -2473,9 +2473,9 @@
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/index.d.ts",
-																	"line": 6,
-																	"character": 18
+																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+																	"line": 3,
+																	"character": 14
 																}
 															],
 															"type": {
@@ -2496,9 +2496,9 @@
 													],
 													"sources": [
 														{
-															"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/index.d.ts",
-															"line": 5,
-															"character": 58
+															"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+															"line": 2,
+															"character": 54
 														}
 													]
 												}
@@ -2510,7 +2510,7 @@
 							]
 						}
 					},
-					"defaultValue": "hsNode.node.child_process.exec"
+					"defaultValue": "cp.exec"
 				},
 				{
 					"id": 2,
@@ -2529,9 +2529,9 @@
 					],
 					"type": {
 						"type": "reference",
-						"name": "LogServer"
+						"name": "Log"
 					},
-					"defaultValue": "new hsNode.Log('osalib')"
+					"defaultValue": "new Log('osalib')"
 				},
 				{
 					"id": 13,
@@ -2690,7 +2690,7 @@
 			"id": 139,
 			"name": "\"overview\"",
 			"kind": 1,
-			"kindString": "External module",
+			"kindString": "Module",
 			"flags": {
 				"isExported": true
 			},
@@ -2710,7 +2710,7 @@
 	],
 	"groups": [
 		{
-			"title": "External modules",
+			"title": "Modules",
 			"kind": 1,
 			"children": [
 				136,

@@ -1,51 +1,62 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>Code coverage report for osaLib.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
             background-image: url(sort-arrow-sprite.png);
         }
     </style>
 </head>
+    
 <body>
 <div class='wrapper'>
-  <div class='pad1'>
-    <h1>
-      <a href="index.html">hsOsaes6: All files</a> osaLib.ts
-    </h1>
-    <div class='clearfix'>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
-        <span class="quiet">Statements</span>
-        <span class='fraction'>27/27</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
-        <span class="quiet">Branches</span>
-        <span class='fraction'>2/4</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>7/7</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
-        <span class="quiet">Lines</span>
-        <span class='fraction'>25/25</span>
-      </div>
+    <div class='pad1'>
+        <h1><a href="index.html">hsOsaes6: All files</a> osaLib.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">93.1% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>27/29</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">50% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">77.78% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>7/9</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>25/25</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
     </div>
-    <p class="quiet">
-      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
-    </p>
-  </div>
-  <div class='status-line high'></div>
-<pre><table class="coverage">
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
 <a name='L3'></a><a href='#L3'>3</a>
@@ -185,9 +196,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-import * as hsNode  from 'hsnode';  
-const log = new hsNode.Log('osalib');
-const exec = hsNode.node.child_process.exec;
+import { Log, cp }  from 'hsnode';  
+const log = new Log('osalib');
+const exec = cp.exec;
 &nbsp;
 // export function osa
 // takes a function, any number of arguments, and a callback.
@@ -214,7 +225,7 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise&lt;any&gt; {
     // conver these args to json
     // to do: replace ':' in a
     const jsonArgs = args.map(a =&gt; `${JSON.stringify(a)}`).join(',');
-    log.debug(`arguments to call: ${jsonArgs}`);
+    log.debug(<span class="fstat-no" title="function not covered" >()=</span>&gt;<span class="cstat-no" title="statement not covered" >`arguments to call: ${jsonArgs}`)</span>;
   
     // augment console.log to encapsulate logs with &lt;node-osa&gt;...&lt;/node-osa&gt; tags
     const consoleLogPatch = `
@@ -228,7 +239,7 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise&lt;any&gt; {
 &nbsp;
     // build a string to call osaFunction, pass in args, and evaulate to
     // the JSON representation of the return value, then call it with osascript
-    log.debug(osaFunction.toString());
+    log.debug(<span class="fstat-no" title="function not covered" >()=</span>&gt;<span class="cstat-no" title="statement not covered" >osaFunction.toString())</span>;
     const functionCallString = consoleLogPatch + 'JSON.stringify((' + osaFunction.toString() + ')(' + jsonArgs + '));';
     const escapedCall = functionCallString
         .replace(/ +/g, ' ')      // replace multiple whitespaces by single whitespaces
@@ -253,21 +264,20 @@ export function osaJS (osaFunction:any, ...args: any[]):Promise&lt;any&gt; {
 }
 &nbsp;
 &nbsp;
-&nbsp;</pre></td></tr>
-</table></pre>
-<div class='push'></div><!-- for sticky footer -->
-</div><!-- /wrapper -->
+&nbsp;</pre></td></tr></table></pre>
 
-</div>
-<script src="prettify.js"></script>
-<script>
-window.onload = function () {
-        if (typeof prettyPrint === 'function') {
-            prettyPrint();
-        }
-};
-</script>
-<script src="sorter.js"></script>
-<script src="block-navigation.js"></script>
-</body>
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
 </html>
+    
