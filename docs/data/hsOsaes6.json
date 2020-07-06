@@ -1179,7 +1179,7 @@
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/esm/cpUtil.d.ts",
 																	"line": 4,
 																	"character": 14
 																}
@@ -1197,7 +1197,7 @@
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/esm/cpUtil.d.ts",
 																	"line": 3,
 																	"character": 14
 																}
@@ -1220,7 +1220,7 @@
 													],
 													"sources": [
 														{
-															"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+															"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/esm/cpUtil.d.ts",
 															"line": 2,
 															"character": 54
 														}
@@ -2455,7 +2455,7 @@
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/esm/cpUtil.d.ts",
 																	"line": 4,
 																	"character": 14
 																}
@@ -2473,7 +2473,7 @@
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+																	"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/esm/cpUtil.d.ts",
 																	"line": 3,
 																	"character": 14
 																}
@@ -2496,7 +2496,7 @@
 													],
 													"sources": [
 														{
-															"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/cpUtil.d.ts",
+															"fileName": "Shared/Sites/staging/apps/hsDocs/node_modules/hsnode/esm/cpUtil.d.ts",
 															"line": 2,
 															"character": 54
 														}
